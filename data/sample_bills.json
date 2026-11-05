@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "updated_at": "2026-10-30T14:30:00Z",
+    "data_source": "manually_entered_sample",
+    "disclaimer": "Sample user-entered bill records for testing Proactive Financial Health Monitoring. No direct bank account integration or unauthorized financial access implied.",
+    "owner": "Sehaj (Product Data & Testing Lead)"
+  },
+  "sample_bills": [
+    {
+      "id": "bill-01",
+      "biller_name": "Campus Electric & Utilities",
+      "category": "utilities",
+      "amount": 42.50,
+      "currency": "USD",
+      "due_date": "2026-11-03",
+      "days_until_due": 4,
+      "due_within_7_days": true,
+      "status": "pending_user_payment",
+      "recurring": "monthly"
+    },
+    {
+      "id": "bill-02",
+      "biller_name": "Fiber Internet Service",
+      "category": "internet",
+      "amount": 35.00,
+      "currency": "USD",
+      "due_date": "2026-11-05",
+      "days_until_due": 6,
+      "due_within_7_days": true,
+      "status": "pending_user_payment",
+      "recurring": "monthly"
+    },
+    {
+      "id": "bill-03",
+      "biller_name": "Student Health Insurance Plan",
+      "category": "insurance",
+      "amount": 65.00,
+      "currency": "USD",
+      "due_date": "2026-11-18",
+      "days_until_due": 19,
+      "due_within_7_days": false,
+      "status": "scheduled",
+      "recurring": "monthly"
+    },
+    {
+      "id": "bill-04",
+      "biller_name": "Streaming Media Bundle",
+      "category": "entertainment",
+      "amount": 12.99,
+      "currency": "USD",
+      "due_date": "2026-11-25",
+      "days_until_due": 26,
+      "due_within_7_days": false,
+      "status": "autopay_active",
+      "recurring": "monthly"
+    }
+  ],
+  "financial_summary": {
+    "total_bills_due_within_7_days": 77.50,
+    "total_monthly_bills": 155.49,
+    "currency": "USD",
+    "budget_guard_integration_note": "When evaluating discretionary shopping budget, Budget Guard alerts user if planned purchase plus 7-day upcoming bills exceeds disposable allocation."
+  }
+}

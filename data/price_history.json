@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "updated_at": "2026-10-30T14:30:00Z",
+    "data_source": "simulated_historical_dataset",
+    "disclaimer": "Simulated price movement history inspired by PayPal Honey capabilities. Strictly for hackathon demonstration. Not connected to live PayPal Honey API or live merchant scrapers.",
+    "owner": "Sehaj (Product Data & Testing Lead)"
+  },
+  "price_trends": {
+    "lamp-01": {
+      "product_id": "lamp-01",
+      "product_name": "LuminaFlex Clamp LED Architect Desk Lamp",
+      "current_price": 29.99,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 36.99,
+        "lowest_price": 27.99,
+        "average_price": 32.50,
+        "drop_from_average_pct": 7.7,
+        "deal_verdict": "Good Value (7.7% below 90-day average)"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 36.99, "event": "Normal retail listing"},
+        {"date": "2026-08-20", "price": 34.99, "event": "Back to School promo"},
+        {"date": "2026-09-15", "price": 32.50, "event": "Catalog adjustment"},
+        {"date": "2026-10-01", "price": 31.99, "event": "Autumn study discount"},
+        {"date": "2026-10-25", "price": 29.99, "event": "Current hackathon deal price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "lamp-02": {
+      "product_id": "lamp-02",
+      "product_name": "AuraDesk Classic Gooseneck Lamp",
+      "current_price": 16.99,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 18.99,
+        "lowest_price": 15.49,
+        "average_price": 17.20,
+        "drop_from_average_pct": 1.2,
+        "deal_verdict": "Fair Price (stable entry pricing)"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 18.99, "event": "Initial stock"},
+        {"date": "2026-09-01", "price": 16.99, "event": "Stable price point"},
+        {"date": "2026-10-15", "price": 15.49, "event": "Flash clearance"},
+        {"date": "2026-10-28", "price": 16.99, "event": "Current price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "lamp-03": {
+      "product_id": "lamp-03",
+      "product_name": "PureLight Eye-Care Minimalist Desk Lamp",
+      "current_price": 44.99,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 54.99,
+        "lowest_price": 44.99,
+        "average_price": 49.50,
+        "drop_from_average_pct": 9.1,
+        "deal_verdict": "90-Day Low (Strong buy signal for premium tier)"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 54.99, "event": "MSRP launch"},
+        {"date": "2026-09-10", "price": 49.99, "event": "Fall promotion"},
+        {"date": "2026-10-20", "price": 44.99, "event": "Current 90-day lowest price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "steamer-01": {
+      "product_id": "steamer-01",
+      "product_name": "SteamGlide Foldable Travel Garment Steamer",
+      "current_price": 26.50,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 32.00,
+        "lowest_price": 24.99,
+        "average_price": 28.75,
+        "drop_from_average_pct": 7.8,
+        "deal_verdict": "Great Deal (7.8% under average)"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 32.00, "event": "Summer travel listing"},
+        {"date": "2026-09-05", "price": 29.99, "event": "Post-summer sale"},
+        {"date": "2026-10-10", "price": 26.50, "event": "Current price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "steamer-02": {
+      "product_id": "steamer-02",
+      "product_name": "QuickPress Handheld Fabric Steamer",
+      "current_price": 19.99,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 22.99,
+        "lowest_price": 18.50,
+        "average_price": 20.40,
+        "drop_from_average_pct": 2.0,
+        "deal_verdict": "Fair Price"
+      },
+      "history_points": [
+        {"date": "2026-08-15", "price": 22.99, "event": "List price"},
+        {"date": "2026-10-01", "price": 19.99, "event": "Standard discount"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "steamer-03": {
+      "product_id": "steamer-03",
+      "product_name": "ProSteam Ultra Garment & Fabric Sanitizer",
+      "current_price": 42.00,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 49.99,
+        "lowest_price": 42.00,
+        "average_price": 46.20,
+        "drop_from_average_pct": 9.1,
+        "deal_verdict": "90-Day Low"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 49.99, "event": "Retail baseline"},
+        {"date": "2026-09-15", "price": 45.00, "event": "Seasonal sale"},
+        {"date": "2026-10-22", "price": 42.00, "event": "Current lowest recorded price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "buds-01": {
+      "product_id": "buds-01",
+      "product_name": "SoundPulse Neo Hybrid ANC Study Earbuds",
+      "current_price": 54.99,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 69.99,
+        "lowest_price": 52.00,
+        "average_price": 62.40,
+        "drop_from_average_pct": 11.9,
+        "deal_verdict": "Best Buy (11.9% below 90-day average)"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 69.99, "event": "Launch retail price"},
+        {"date": "2026-08-25", "price": 64.99, "event": "Student promo"},
+        {"date": "2026-09-18", "price": 59.99, "event": "Campus bundle discount"},
+        {"date": "2026-10-15", "price": 54.99, "event": "Current deal price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "buds-02": {
+      "product_id": "buds-02",
+      "product_name": "QuietEcho Focus Entry ANC Earbuds",
+      "current_price": 38.00,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 44.99,
+        "lowest_price": 35.00,
+        "average_price": 39.50,
+        "drop_from_average_pct": 3.8,
+        "deal_verdict": "Standard Fair Price"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 44.99, "event": "Initial retail"},
+        {"date": "2026-09-12", "price": 39.99, "event": "Price cut"},
+        {"date": "2026-10-20", "price": 38.00, "event": "Current price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "buds-03": {
+      "product_id": "buds-03",
+      "product_name": "SonicSilence Studio Pro Adaptive ANC Earbuds",
+      "current_price": 95.00,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 119.99,
+        "lowest_price": 92.50,
+        "average_price": 108.00,
+        "drop_from_average_pct": 12.0,
+        "deal_verdict": "Significant Discount on Premium Model"
+      },
+      "history_points": [
+        {"date": "2026-08-01", "price": 119.99, "event": "MSRP baseline"},
+        {"date": "2026-09-01", "price": 109.99, "event": "Audio festival discount"},
+        {"date": "2026-10-15", "price": 95.00, "event": "Current sale price"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    },
+    "laptop-01": {
+      "product_id": "laptop-01",
+      "product_name": "Lenovo ThinkPad T490 14\" FHD (Certified Refurbished)",
+      "current_price": 289.00,
+      "currency": "USD",
+      "stats_90_days": {
+        "highest_price": 329.00,
+        "lowest_price": 279.00,
+        "average_price": 304.50,
+        "drop_from_average_pct": 5.1,
+        "deal_verdict": "Competitive Refurbished Value"
+      },
+      "history_points": [
+        {"date": "2026-08-10", "price": 329.00, "event": "Restock batch A"},
+        {"date": "2026-09-20", "price": 309.00, "event": "Tier-2 price drop"},
+        {"date": "2026-10-18", "price": 289.00, "event": "Current emergency stock pricing"}
+      ],
+      "data_source": "simulated_historical_dataset",
+      "disclaimer": "Simulated Honey price history for demonstration only."
+    }
+  }
+}

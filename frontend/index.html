@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPilot AI 2.0 — Budget-Aware Shopping Assistant</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/accessibility.css" />
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main shopping content</a>
+
+  <!-- ARIA Live Region for Screen Readers -->
+  <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- App Header -->
+  <header class="app-header" role="banner">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="brand-logo-icon" aria-hidden="true">🛒</div>
+        <div class="brand-text">
+          <h1>PayPilot AI <span class="brand-badge">2.0 MVP</span></h1>
+          <p class="brand-subtitle">Budget-Aware Shopping Assistant • Frontend by Meenal</p>
+        </div>
+      </div>
+
+      <!-- Accessibility & Control Bar -->
+      <div class="accessibility-bar" role="toolbar" aria-label="Accessibility and assistance tools">
+        <button id="btn-high-contrast" class="a11y-btn" title="Toggle High Contrast Mode (Alt+H)" aria-label="Toggle high contrast mode">
+          <span aria-hidden="true">👁️</span> <span>High Contrast</span>
+        </button>
+        <button id="btn-text-scale" class="a11y-btn" title="Cycle Text Size (Alt+T)" aria-label="Cycle font size (Standard, Medium, Large)">
+          <span aria-hidden="true">🔤</span> <span>A 100%</span>
+        </button>
+        <button id="btn-tts" class="a11y-btn" title="Read Aloud Summary (Alt+R)" aria-label="Read aloud current recommendations and budget status">
+          <span class="icon" aria-hidden="true">🔊</span> <span>Read Aloud</span>
+        </button>
+        <button id="btn-voice-mic" class="a11y-btn" title="Hands-Free Voice Command" aria-label="Activate voice assistant commands">
+          <span aria-hidden="true">🎙️</span> <span>Voice</span>
+        </button>
+        <button id="btn-open-bills" class="a11y-btn" title="Proactive Financial Health & Bills" aria-label="Open bill tracker and financial health monitoring">
+          <span aria-hidden="true">📅</span> <span>Bills</span>
+        </button>
+
+        <div id="backend-status-badge" class="status-badge badge-offline" role="status" aria-label="Backend server connection status">
+          <span class="dot"></span> <span>Checking Backend...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Voice Transcript Live Banner -->
+  <div id="voice-transcript-banner" class="voice-banner hidden" role="status" aria-live="polite"></div>
+
+  <!-- Sub Navigation Bar -->
+  <nav class="app-subnav" role="navigation" aria-label="Main navigation views">
+    <div class="subnav-container">
+      <button id="nav-btn-dorm" class="nav-tab-btn active">
+        <span>🎓 College Dorm Move-In ($150 Demo)</span>
+      </button>
+      <button id="nav-btn-emergency" class="nav-tab-btn">
+        <span>🚨 Emergency Expense Navigator ($500 Laptop)</span>
+      </button>
+      <button id="nav-btn-catalogue" class="nav-tab-btn">
+        <span>🛍️ Product Cards & Catalogue</span>
+      </button>
+      <button id="nav-btn-comparison" class="nav-tab-btn">
+        <span>⚖️ Bundle Comparison Matrix</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-container" role="main">
+
+    <!-- Quick-Fill Demo Chips -->
+    <section class="quick-fill-bar" aria-label="Hackathon Demo Scenarios">
+      <span class="quick-fill-label">⚡ 1-Click Demo Scenarios:</span>
+      <button id="chip-demo-dorm" class="chip-btn" title="Load College Dorm Move-In demo ($150 budget)">
+        🎓 College Dorm Move-In ($150 Strict Budget)
+      </button>
+      <button id="chip-demo-emergency" class="chip-btn" title="Load Emergency Laptop Replacement demo ($500 budget)">
+        🚨 Urgent Broken Laptop Replacement ($500 Budget)
+      </button>
+    </section>
+
+    <!-- VIEW 1: COLLEGE DORM MOVE-IN OPTIMIZER (MVP CORE DEMO) -->
+    <div id="view-dorm" class="view-section">
+      <div class="shopping-grid-layout">
+        <!-- Left Main Column -->
+        <div class="main-flow-col">
+          <!-- Step 1: Describe Form -->
+          <section class="card describe-card" aria-labelledby="heading-describe">
+            <div class="card-heading-row">
+              <div>
+                <span class="step-tag">Step 1 • Describe</span>
+                <h2 id="heading-describe">Shopping Needs & Stated Budget</h2>
+              </div>
+            </div>
+
+            <form id="shopping-input-form">
+              <div class="form-group">
+                <label for="user-prompt-input">Describe your requirements and priorities:</label>
+                <textarea id="user-prompt-input" class="form-textarea" rows="3" placeholder="e.g. Moving into an unfurnished dorm with strict $150 budget. Need desk lamp, steamer, and ANC earbuds. Prioritize reliability.">I'm a college student moving into an unfurnished dorm with a strict $150 total budget. I need a desk lamp, a portable steamer, and noise-cancelling study buds. Prioritize reliability and explain compromises.</textarea>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label for="stated-budget-input">Maximum Stated Budget ($ USD):</label>
+                  <div class="input-with-currency">
+                    <span class="currency-sym">$</span>
+                    <input type="number" id="stated-budget-input" class="form-input" value="150.00" step="1.00" min="10" max="5000" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="priority-select">Optimization Objective:</label>
+                  <select id="priority-select" class="form-select">
+                    <option value="reliability" selected>High Reliability & Build Quality (Recommended)</option>
+                    <option value="cost">Lowest Total Cost (Budget Saver)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                🔍 Run Multi-Item Budget Guard Optimization
+              </button>
+            </form>
+          </section>
+
+          <!-- Step 2 & 3: Budget Guard Banner -->
+          <section id="budget-guard-banner" class="budget-guard-banner banner-under-budget" aria-labelledby="budget-guard-heading" role="region">
+            <div id="bundle-loading-spinner" class="spinner hidden"></div>
+            <!-- Populated dynamically by budget_guard_ui.js -->
+          </section>
+
+          <!-- Over-budget 1-click Viable Swaps Container -->
+          <section id="viable-swaps-container" role="region" aria-label="Over-budget swap alternatives"></section>
+
+          <!-- Step 2: AI Trade-Off Explanations -->
+          <section id="tradeoff-explanation-box" role="region" aria-label="AI Trade-off Explanations"></section>
+        </div>
+
+        <!-- Right Column: Selected Bundle Basket & Financial Health -->
+        <aside class="sidebar-panel" aria-label="Selected basket and upcoming bills">
+          <div class="card basket-card">
+            <h3>
+              <span>🛒 Active Bundle Items</span>
+              <span class="badge badge-info">3 Items</span>
+            </h3>
+
+            <div id="selected-items-list" class="selected-items-list">
+              <!-- Populated dynamically -->
+            </div>
+
+            <div class="checkout-callout">
+              <button id="btn-proceed-checkout" class="btn btn-primary btn-block btn-lg">
+                💳 Proceed to PayPal Checkout ➔
+              </button>
+              <p style="text-align: center; margin-top: 8px; font-size: 11px; color: var(--text-muted);">
+                🔒 Protected by PayPal Sandbox order locking
+              </p>
+            </div>
+          </div>
+
+          <!-- Proactive 7-Day Bills Callout Card -->
+          <div class="card basket-card">
+            <h3>
+              <span>📅 Financial Health Check</span>
+              <button class="btn btn-ghost btn-xs" onclick="app.openBillsModal()">Manage Bills</button>
+            </h3>
+            <div id="bills-budget-callout">
+              <!-- Populated dynamically by bill_manager_ui.js -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- VIEW 2: EMERGENCY EXPENSE NAVIGATOR ($500 LAPTOP) -->
+    <div id="view-emergency" class="view-section hidden">
+      <div id="emergency-content-container">
+        <!-- Populated dynamically by app.js renderEmergencyNavigator() -->
+      </div>
+    </div>
+
+    <!-- VIEW 3: FULL PRODUCT CATALOGUE -->
+    <div id="view-catalogue" class="view-section hidden">
+      <div class="catalogue-header card" style="padding: 16px; margin-bottom: 20px;">
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <div>
+            <h2>Verified Product Catalogue</h2>
+            <p style="font-size: 13px; color: var(--text-muted);">
+              All catalogue prices carry verified retail benchmarks in accordance with hackathon guardrails.
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="cat-search-input" class="form-input" style="width: 220px;" placeholder="Search products..." />
+            <select id="cat-filter-select" class="form-select" style="width: 180px;">
+              <option value="all">All Categories</option>
+              <option value="desk_lamp">Desk Lamps</option>
+              <option value="portable_steamer">Portable Steamers</option>
+              <option value="noise_cancelling_earbuds">ANC Earbuds</option>
+              <option value="laptop">Laptops</option>
+            </select>
+            <select id="cat-sort-select" class="form-select" style="width: 170px;">
+              <option value="reliability_desc">Highest Reliability</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="catalogue-cards-grid" class="cards-grid">
+        <!-- Rendered by app.js renderCatalogueCards() -->
+      </div>
+    </div>
+
+    <!-- VIEW 4: SIDE-BY-SIDE BUNDLE COMPARISON -->
+    <div id="view-comparison" class="view-section hidden">
+      <div class="card" style="padding: 20px; margin-bottom: 24px;">
+        <h2>Multi-Item Bundle Comparison Matrix</h2>
+        <p style="color: var(--text-muted); font-size: 13px;">
+          Comparing the AI-recommended high-reliability combination against the minimum-cost budget saver.
+        </p>
+      </div>
+
+      <div id="bundle-comparison-matrix" class="bundle-matrix-container">
+        <!-- Populated dynamically by budget_guard_ui.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- MODAL 1: CHECKOUT & PAYPAL SANDBOX FLOW -->
+  <!-- ================================================================= -->
+  <div id="checkout-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="checkout-modal-title">PayPilot AI — PayPal Sandbox Checkout</h3>
+        <button id="btn-close-checkout" class="btn-close-modal" aria-label="Close checkout modal">✕</button>
+      </div>
+
+      <!-- Step Tracker Bar -->
+      <div id="checkout-step-tracker" class="step-tracker-bar"></div>
+
+      <!-- Dynamic Stage Body -->
+      <div id="checkout-body-content"></div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL 2: PRICE TREND & HONEY SIMULATION MODAL -->
+  <!-- ================================================================= -->
+  <div id="price-history-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
+    <div class="modal-content" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 id="history-modal-title">Price Trend & Movement Insight</h3>
+        <button id="btn-close-price-history" class="btn-close-modal" aria-label="Close price trends modal">✕</button>
+      </div>
+      <div id="price-history-content"></div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL 3: PROACTIVE FINANCIAL HEALTH & BILL TRACKER MODAL -->
+  <!-- ================================================================= -->
+  <div id="bills-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="bills-modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="bills-modal-title">📅 Proactive Financial Health & Bill Tracker</h3>
+        <button id="btn-close-bills" class="btn-close-modal" aria-label="Close bill manager">✕</button>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <p style="font-size: 13px; color: var(--text-muted);">
+          Record upcoming bills to let PayPilot AI compute your true disposable shopping balance.
+          <em>Note: We do not access or imply access to your private bank balance.</em>
+        </p>
+      </div>
+
+      <!-- Add Bill Form -->
+      <form id="add-bill-form" class="card" style="padding: 16px; margin-bottom: 20px; background: #f8fafc;">
+        <h4 style="margin-bottom: 10px; font-size: 14px;">+ Record New Upcoming Bill</h4>
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 10px; margin-bottom: 10px;">
+          <input type="text" id="new-bill-title" class="form-input" placeholder="Bill Name (e.g. Mobile Plan)" required />
+          <input type="number" id="new-bill-amount" class="form-input" placeholder="Amount ($)" step="0.01" required />
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+          <input type="date" id="new-bill-date" class="form-input" required />
+          <select id="new-bill-category" class="form-select">
+            <option value="Utilities">Utilities</option>
+            <option value="Internet">Internet / Phone</option>
+            <option value="Housing">Housing / Rent</option>
+            <option value="Entertainment">Entertainment / Subs</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-sm btn-block">Add Bill Record</button>
+      </form>
+
+      <!-- Bills List -->
+      <h4 style="margin-bottom: 8px;">Recorded Bills:</h4>
+      <div id="bills-list-container" style="display: flex; flex-direction: column; gap: 8px; max-height: 250px; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL 4: KEYBOARD SHORTCUTS HELP MODAL -->
+  <!-- ================================================================= -->
+  <div id="shortcuts-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title">
+    <div class="modal-content" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 id="shortcuts-modal-title">⌨️ Keyboard Navigation Shortcuts</h3>
+        <button id="btn-close-shortcuts" class="btn-close-modal" aria-label="Close keyboard shortcuts">✕</button>
+      </div>
+      <div style="font-size: 13px; line-height: 1.8;">
+        <p><strong>Alt + H</strong>: Toggle High Contrast Mode (WCAG AAA)</p>
+        <p><strong>Alt + T</strong>: Cycle Text Size (Standard 100%, 120%, 140%)</p>
+        <p><strong>Alt + R</strong>: Read Aloud Summary / Stop Speech</p>
+        <p><strong>Alt + K</strong>: Open / Close this Shortcuts dialog</p>
+        <p><strong>Tab / Shift+Tab</strong>: Navigate between interactive elements</p>
+        <p><strong>Escape</strong>: Close any open modal dialog</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/catalogue_data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/accessibility.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/bill_manager_ui.js"></script>
+  <script src="js/budget_guard_ui.js"></script>
+  <script src="js/paypal_checkout_ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

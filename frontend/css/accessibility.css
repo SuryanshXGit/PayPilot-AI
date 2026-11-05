@@ -1,0 +1,234 @@
+/**
+ * PayPilot AI — Adaptive Universal Accessibility Styles
+ * Module: Meenal (Universal Accessibility Owner)
+ *
+ * Implements:
+ * 1. High contrast theme (WCAG AAA compliant black/yellow/cyan palette)
+ * 2. Scalable text typography rules (100%, 120%, 140%)
+ * 3. Clear, persistent focus indicators for keyboard navigation
+ * 4. Motion sensitivity overrides (prefers-reduced-motion)
+ * 5. Screen reader utilities (.sr-only)
+ */
+
+/* -------------------------------------------------------------------------
+ * 1. SCREEN READER UTILITY
+ * ------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* -------------------------------------------------------------------------
+ * 2. SCALABLE TEXT RULES
+ * ------------------------------------------------------------------------- */
+html.text-scale-100 {
+  font-size: 16px;
+}
+
+html.text-scale-120 {
+  font-size: 19.2px;
+}
+
+html.text-scale-140 {
+  font-size: 22.4px;
+}
+
+html.text-scale-120 .product-title,
+html.text-scale-140 .product-title {
+  -webkit-line-clamp: 3;
+}
+
+/* -------------------------------------------------------------------------
+ * 3. HIGH CONTRAST THEME (WCAG AAA)
+ * ------------------------------------------------------------------------- */
+html.high-contrast {
+  --bg-primary: #000000;
+  --bg-surface: #0a0a0a;
+  --bg-surface-alt: #171717;
+  --text-main: #ffffff;
+  --text-muted: #e2e8f0;
+  --text-light: #cbd5e1;
+  --border-color: #ffff00;
+  --border-focus: #00ffff;
+
+  --pp-blue: #00ffff;
+  --pp-navy: #000000;
+  --pp-light-blue: #ffff00;
+  --pp-yellow: #ffff00;
+
+  --color-success: #00ff66;
+  --color-success-bg: #002910;
+  --color-warning: #ffff00;
+  --color-warning-bg: #292400;
+  --color-danger: #ff4d4d;
+  --color-danger-bg: #290000;
+}
+
+html.high-contrast body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html.high-contrast :focus-visible {
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 4px !important;
+}
+
+html.high-contrast .app-header {
+  background: #000000;
+  border-bottom: 2px solid #ffff00;
+}
+
+html.high-contrast .app-subnav {
+  background: #000000;
+  border-bottom: 2px solid #ffff00;
+}
+
+html.high-contrast .nav-tab-btn {
+  color: #ffffff;
+}
+
+html.high-contrast .nav-tab-btn.active {
+  color: #ffff00;
+  border-bottom: 4px solid #ffff00;
+}
+
+html.high-contrast .card {
+  background: #0a0a0a;
+  border: 2px solid #ffff00;
+}
+
+html.high-contrast .btn-primary {
+  background: #ffff00;
+  color: #000000;
+  font-weight: 800;
+  border: 2px solid #ffffff;
+}
+
+html.high-contrast .btn-primary:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+html.high-contrast .btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: #000000;
+}
+
+html.high-contrast .btn-outline:hover {
+  background: #262626;
+  border-color: #ffff00;
+}
+
+html.high-contrast .btn-success {
+  background: #00ff66;
+  color: #000000;
+  font-weight: 800;
+}
+
+html.high-contrast .btn-danger {
+  background: #ff4d4d;
+  color: #000000;
+  font-weight: 800;
+}
+
+html.high-contrast .budget-guard-banner.banner-under-budget {
+  background: #00220d;
+  border: 3px solid #00ff66;
+}
+
+html.high-contrast .budget-guard-banner.banner-over-budget {
+  background: #2b0505;
+  border: 3px solid #ff4d4d;
+}
+
+html.high-contrast .banner-body {
+  background: #000000;
+  border: 1px solid #ffff00;
+}
+
+html.high-contrast .stat-value {
+  color: #ffffff;
+}
+
+html.high-contrast .stat-highlight .total-value {
+  color: #ffff00;
+}
+
+html.high-contrast .product-title {
+  color: #ffff00;
+}
+
+html.high-contrast .current-price {
+  color: #ffff00;
+  font-size: 20px;
+}
+
+html.high-contrast .original-price {
+  color: #94a3b8;
+}
+
+html.high-contrast .form-input,
+html.high-contrast .form-textarea,
+html.high-contrast .form-select {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffff00;
+}
+
+html.high-contrast .modal-content {
+  background: #000000;
+  border: 3px solid #ffff00;
+  color: #ffffff;
+}
+
+html.high-contrast .modal-header {
+  border-bottom: 2px solid #ffff00;
+}
+
+html.high-contrast .modal-header h3 {
+  color: #ffff00;
+}
+
+html.high-contrast .locked-items-list,
+html.high-contrast .receipt-card,
+html.high-contrast .bill-summary-chip {
+  background: #121212;
+  border: 1px solid #ffff00;
+}
+
+html.high-contrast .pay-in-4-box {
+  background: #1f1400;
+  border: 2px solid #ffff00;
+}
+
+html.high-contrast .p4-warning,
+html.high-contrast .p4-eligibility {
+  color: #ffff00;
+}
+
+html.high-contrast .btn-paypal-sandbox {
+  background: #ffff00;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+/* -------------------------------------------------------------------------
+ * 4. MOTION REDUCTION (Vestibular Sensitivity)
+ * ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

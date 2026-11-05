@@ -1,0 +1,464 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "updated_at": "2026-10-30T14:30:00Z",
+    "data_source": "simulated",
+    "disclaimer": "All product details, pricing, delivery estimates, and warranty information in this catalogue are simulated for the PayPal AI Hackathon demonstration. Not affiliated with live merchant inventory.",
+    "owner": "Sehaj (Product Data & Testing Lead)"
+  },
+  "products": [
+    {
+      "id": "lamp-01",
+      "name": "LuminaFlex Clamp LED Architect Desk Lamp",
+      "category": "desk_lamp",
+      "price": 29.99,
+      "currency": "USD",
+      "rating": 4.8,
+      "review_count": 1420,
+      "reliability_score": 9.2,
+      "features": [
+        "Heavy-duty metal C-clamp mount saves dorm desk space",
+        "5 color temperature modes (3000K-6000K) and stepless dimming",
+        "Multi-angle swing arm with 50,000-hour LED lifespan",
+        "Eye-care flicker-free diffuser"
+      ],
+      "specs": {
+        "wattage": "12W",
+        "lumens": 900,
+        "material": "Aircraft-grade aluminum & ABS",
+        "mounting": "Clamp up to 2.5 inch desktop thickness",
+        "power_source": "UL-listed AC adapter included"
+      },
+      "trade_offs": {
+        "pros": ["Extremely durable metal arm", "Does not take desk surface area", "Superior eye protection for late-night study"],
+        "compromises": ["Requires desk lip/edge to mount; cannot stand unsupported on flat surfaces"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"},
+        {"tier": "Express 2-Day", "cost": 4.99, "estimated_days": "2 days"}
+      ],
+      "warranty_info": "2-year manufacturer warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "lamp-02",
+      "name": "AuraDesk Classic Gooseneck Lamp",
+      "category": "desk_lamp",
+      "price": 16.99,
+      "currency": "USD",
+      "rating": 4.3,
+      "review_count": 890,
+      "reliability_score": 7.5,
+      "features": [
+        "Freestanding weighted base",
+        "360-degree flexible gooseneck",
+        "Single-touch toggle switch",
+        "Compact footprint"
+      ],
+      "specs": {
+        "wattage": "7W",
+        "lumens": 450,
+        "material": "Polycarbonate plastic & silicone",
+        "mounting": "Standalone base",
+        "power_source": "USB-A powered (adapter not included)"
+      },
+      "trade_offs": {
+        "pros": ["Lowest upfront cost", "Place anywhere without clamping", "Lightweight"],
+        "compromises": ["Plastic neck loosens over time", "Fixed color temperature", "USB adapter required separately"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "90-day limited warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "lamp-03",
+      "name": "PureLight Eye-Care Minimalist Desk Lamp",
+      "category": "desk_lamp",
+      "price": 44.99,
+      "currency": "USD",
+      "rating": 4.9,
+      "review_count": 2150,
+      "reliability_score": 9.6,
+      "features": [
+        "CRI 95+ full-spectrum daylight LED",
+        "Integrated 10W wireless charging pad & USB port",
+        "Auto-dimming ambient brightness sensor",
+        "Sleek anodized aluminum chassis"
+      ],
+      "specs": {
+        "wattage": "15W",
+        "lumens": 1100,
+        "material": "CNC machined aluminum",
+        "mounting": "Heavy counterweighted base",
+        "power_source": "DC 12V adapter"
+      },
+      "trade_offs": {
+        "pros": ["Top-tier optical clarity", "Built-in phone charging reduces wire clutter", "Premium durability"],
+        "compromises": ["Higher price consumes nearly 30% of a $150 student dorm budget"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "2-4 days"}
+      ],
+      "warranty_info": "3-year manufacturer warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "steamer-01",
+      "name": "SteamGlide Foldable Travel Garment Steamer",
+      "category": "portable_steamer",
+      "price": 26.50,
+      "currency": "USD",
+      "rating": 4.6,
+      "review_count": 1130,
+      "reliability_score": 8.8,
+      "features": [
+        "1000W rapid heating in 25 seconds",
+        "120ml detachable leak-proof water reservoir",
+        "Collapsible handle for compact storage",
+        "Safe for silk, wool, synthetic, and cotton"
+      ],
+      "specs": {
+        "power": "1000W",
+        "steam_output": "18g/min",
+        "water_capacity": "120 ml",
+        "weight": "1.3 lbs",
+        "auto_shutoff": true
+      },
+      "trade_offs": {
+        "pros": ["Fast warm-up time", "Folds flat to fit in dorm drawers or luggage", "Leak-proof valve"],
+        "compromises": ["120ml tank handles 2-3 garments per fill; needs refill for laundry day batches"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "1-year replacement warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "steamer-02",
+      "name": "QuickPress Handheld Fabric Steamer",
+      "category": "portable_steamer",
+      "price": 19.99,
+      "currency": "USD",
+      "rating": 4.1,
+      "review_count": 640,
+      "reliability_score": 7.0,
+      "features": [
+        "800W heating element",
+        "Continuous steam toggle trigger",
+        "Lightweight ergonomic grip",
+        "Fabric lint brush attachment included"
+      ],
+      "specs": {
+        "power": "800W",
+        "steam_output": "14g/min",
+        "water_capacity": "100 ml",
+        "weight": "1.1 lbs",
+        "auto_shutoff": false
+      },
+      "trade_offs": {
+        "pros": ["Lowest cost portable steamer", "Very lightweight"],
+        "compromises": ["45-second preheat time", "Occasional water droplet spitting if tilted horizontally", "No auto shutoff"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "6-month limited warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "steamer-03",
+      "name": "ProSteam Ultra Garment & Fabric Sanitizer",
+      "category": "portable_steamer",
+      "price": 42.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "review_count": 1780,
+      "reliability_score": 9.4,
+      "features": [
+        "1400W commercial-grade pump system",
+        "Heated ceramic soleplate acts as horizontal iron",
+        "250ml large reservoir for 15 min continuous steam",
+        "Intelligent overheat protection and auto-off"
+      ],
+      "specs": {
+        "power": "1400W",
+        "steam_output": "25g/min",
+        "water_capacity": "250 ml",
+        "weight": "2.2 lbs",
+        "auto_shutoff": true
+      },
+      "trade_offs": {
+        "pros": ["Removes stubborn wrinkles twice as fast", "Ceramic plate eliminates need for ironing board", "Heavy-duty pump longevity"],
+        "compromises": ["Heavier hand feel", "Bulky for small shared dorm closets", "Higher price impact on budget"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "2-4 days"}
+      ],
+      "warranty_info": "2-year manufacturer warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "buds-01",
+      "name": "SoundPulse Neo Hybrid ANC Study Earbuds",
+      "category": "earbuds",
+      "price": 54.99,
+      "currency": "USD",
+      "rating": 4.7,
+      "review_count": 3100,
+      "reliability_score": 8.9,
+      "features": [
+        "35dB Hybrid Active Noise Cancellation tuned for ambient study & library",
+        "32-hour combined battery life (8h earbuds + 24h case)",
+        "Transparency pass-through mode for dorm conversations",
+        "IPX5 sweat and water resistance"
+      ],
+      "specs": {
+        "anc_depth": "35 dB",
+        "driver_size": "10mm dynamic biocellulose",
+        "bluetooth": "5.3 with low-latency mode",
+        "battery_life": "8h ANC on / 32h total with USB-C quick charge",
+        "microphones": "4-mic ENC array"
+      },
+      "trade_offs": {
+        "pros": ["Exceptional value-to-ANC ratio", "Filters room AC and dorm hallway chatter effectively", "Reliable battery stamina"],
+        "compromises": ["Microphone clarity is average in high wind conditions outdoors"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"},
+        {"tier": "Express Next-Day", "cost": 7.99, "estimated_days": "1 day"}
+      ],
+      "warranty_info": "1-year hassle-free replacement warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "buds-02",
+      "name": "QuietEcho Focus Entry ANC Earbuds",
+      "category": "earbuds",
+      "price": 38.00,
+      "currency": "USD",
+      "rating": 4.2,
+      "review_count": 920,
+      "reliability_score": 7.2,
+      "features": [
+        "25dB standard Active Noise Cancellation",
+        "Bluetooth 5.2 connectivity",
+        "Ultra-compact pill charging case",
+        "Bass-boosted acoustics"
+      ],
+      "specs": {
+        "anc_depth": "25 dB",
+        "driver_size": "8mm dynamic",
+        "bluetooth": "5.2",
+        "battery_life": "5h ANC on / 20h total",
+        "microphones": "2-mic array"
+      },
+      "trade_offs": {
+        "pros": ["Most affordable ANC option", "Pocket-sized carry case"],
+        "compromises": ["Modest noise attenuation (cannot silence louder dorm parties)", "5-hour playback requires frequent recharging", "Build is light plastic"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "6-month limited warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "buds-03",
+      "name": "SonicSilence Studio Pro Adaptive ANC Earbuds",
+      "category": "earbuds",
+      "price": 95.00,
+      "currency": "USD",
+      "rating": 4.9,
+      "review_count": 4820,
+      "reliability_score": 9.7,
+      "features": [
+        "42dB Adaptive Deep Noise Cancellation with auto-environment tuning",
+        "Hi-Res Audio LDAC codec certified",
+        "Multipoint Bluetooth pairing (connect laptop & phone simultaneously)",
+        "40-hour total battery life with Qi wireless charging"
+      ],
+      "specs": {
+        "anc_depth": "42 dB adaptive",
+        "driver_size": "11mm titanium dual drivers",
+        "bluetooth": "5.4 with multipoint",
+        "battery_life": "10h ANC on / 40h total",
+        "microphones": "6-mic beamforming array"
+      },
+      "trade_offs": {
+        "pros": ["Studio-grade silent background even in noisy dining halls", "Seamless multipoint device switching", "Unmatched build quality"],
+        "compromises": ["At $95.00, leaves only $55.00 for both lamp and steamer under a strict $150 dorm budget, requiring severe sacrifices elsewhere"]
+      },
+      "shipping_options": [
+        {"tier": "Standard", "cost": 0.00, "estimated_days": "2-3 days"}
+      ],
+      "warranty_info": "2-year extended warranty included (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    },
+    {
+      "id": "laptop-01",
+      "name": "Lenovo ThinkPad T490 14\" FHD (Certified Refurbished)",
+      "category": "emergency_laptop",
+      "price": 289.00,
+      "currency": "USD",
+      "rating": 4.7,
+      "review_count": 870,
+      "reliability_score": 9.3,
+      "features": [
+        "Intel Core i5-8365U Quad-Core up to 4.1GHz",
+        "16GB DDR4 RAM, 256GB NVMe SSD",
+        "Spill-resistant legendary ThinkPad keyboard",
+        "Mil-Spec 810G tested for extreme durability",
+        "USB-C Power Delivery & Thunderbolt 3"
+      ],
+      "specs": {
+        "display": "14.0 inch FHD (1920x1080) IPS Anti-glare",
+        "os": "Windows 11 Pro 64-bit",
+        "ports": "2x USB 3.1, 1x USB-C, 1x Thunderbolt 3, HDMI 1.4, RJ-45 Ethernet, Headphone combo",
+        "weight": "3.23 lbs",
+        "battery_health": "Guaranteed minimum 80% original capacity (simulated)"
+      },
+      "trade_offs": {
+        "pros": [
+          "Enterprise-grade reliability and modular repairability",
+          "16GB RAM handles multitasking, programming, and large spreadsheets smoothly",
+          "Next-day emergency delivery available for urgent work continuity"
+        ],
+        "compromises": [
+          "Refurbished unit may exhibit minor cosmetic scuffs on casing",
+          "Older generation integrated graphics not suited for modern 3D gaming"
+        ]
+      },
+      "shipping_options": [
+        {"tier": "Next-Day Urgent Delivery", "cost": 15.00, "estimated_days": "1 day (Guaranteed arrival tomorrow)"},
+        {"tier": "Standard Ground", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "1-Year Certified Refurbished Warranty with free 30-day returns (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated inventory data for hackathon emergency scenario. Not a live retail store inventory."
+    },
+    {
+      "id": "laptop-02",
+      "name": "Acer Swift 3 14\" Ultra-Slim (Brand New)",
+      "category": "emergency_laptop",
+      "price": 429.00,
+      "currency": "USD",
+      "rating": 4.5,
+      "review_count": 1340,
+      "reliability_score": 8.5,
+      "features": [
+        "AMD Ryzen 5 5500U 6-Core / 12-Thread",
+        "8GB LPDDR4X RAM, 512GB PCIe NVMe SSD",
+        "Backlit keyboard and fingerprint biometric reader",
+        "All-metal aluminum chassis weighing only 2.65 lbs"
+      ],
+      "specs": {
+        "display": "14.0 inch FHD 100% sRGB IPS",
+        "os": "Windows 11 Home",
+        "ports": "USB-C 3.2 Gen 2, 2x USB 3.2 Gen 1, HDMI 2.0",
+        "weight": "2.65 lbs",
+        "battery_health": "100% Brand New"
+      },
+      "trade_offs": {
+        "pros": [
+          "Brand new factory-sealed hardware with crisp modern display",
+          "Fast 6-core processor handles video calls and office software easily",
+          "Featherlight for commuting"
+        ],
+        "compromises": [
+          "Significantly higher upfront expense ($429 vs $289)",
+          "8GB RAM is soldered onto motherboard and cannot be upgraded",
+          "Only 2-day delivery available (no guaranteed overnight option)"
+        ]
+      },
+      "shipping_options": [
+        {"tier": "Expedited 2-Day", "cost": 0.00, "estimated_days": "2 days"}
+      ],
+      "warranty_info": "1-Year Acer Official Limited Manufacturer Warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated inventory data for hackathon emergency scenario. Not a live retail store inventory."
+    },
+    {
+      "id": "laptop-03",
+      "name": "ASUS Chromebook CX1 14\" (Budget Replacement)",
+      "category": "emergency_laptop",
+      "price": 149.00,
+      "currency": "USD",
+      "rating": 4.1,
+      "review_count": 510,
+      "reliability_score": 7.6,
+      "features": [
+        "Intel Celeron N4020 Dual-Core processor",
+        "4GB LPDDR4 RAM, 64GB eMMC storage",
+        "Spill-resistant keyboard and rubber bumper edges",
+        "Instant boot-up with ChromeOS cloud ecosystem"
+      ],
+      "specs": {
+        "display": "14.0 inch HD (1366x768) NanoEdge Anti-glare",
+        "os": "ChromeOS",
+        "ports": "2x USB-C 3.2, 2x USB-A 3.2, MicroSD slot, Audio jack",
+        "weight": "3.15 lbs",
+        "battery_health": "100% Brand New"
+      },
+      "trade_offs": {
+        "pros": [
+          "Ultra-low replacement cost for tight emergency cash-flow ($149.00)",
+          "All-day 11-hour battery life",
+          "Instant cloud synchronization for Google Docs/Sheets"
+        ],
+        "compromises": [
+          "ChromeOS cannot run native Windows or macOS desktop software (e.g. specialized accounting, CAD, or dev environments)",
+          "Lower 768p screen resolution and limited local storage (64GB eMMC)"
+        ]
+      },
+      "shipping_options": [
+        {"tier": "Next-Day Priority", "cost": 12.00, "estimated_days": "1 day"},
+        {"tier": "Standard Ground", "cost": 0.00, "estimated_days": "3-5 days"}
+      ],
+      "warranty_info": "90-Day ASUS Refurbished/Overstock Warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated inventory data for hackathon emergency scenario. Not a live retail store inventory."
+    },
+    {
+      "id": "acc-01",
+      "name": "Anker 65W GaN II USB-C Fast Charger & 6ft Cable",
+      "category": "laptop_accessory",
+      "price": 27.99,
+      "currency": "USD",
+      "rating": 4.9,
+      "review_count": 5400,
+      "reliability_score": 9.5,
+      "features": [
+        "GaN II high-efficiency compact power brick",
+        "Fast charges laptops, tablets, and phones",
+        "Durable braided 100W-rated USB-C to USB-C cable"
+      ],
+      "specs": {
+        "output": "65W Max Power Delivery 3.0",
+        "cable_length": "6 feet (1.8 meters)",
+        "pins": "Foldable US prong"
+      },
+      "trade_offs": {
+        "pros": ["Essential replacement when laptop charger fails", "Universal device compatibility", "Pocket-sized"],
+        "compromises": ["Single port output"]
+      },
+      "shipping_options": [
+        {"tier": "Next-Day Add-On", "cost": 0.00, "estimated_days": "1 day with laptop bundle"}
+      ],
+      "warranty_info": "18-month Anker warranty (simulated)",
+      "data_source": "simulated",
+      "data_source_disclaimer": "Simulated catalogue item for hackathon demonstration."
+    }
+  ]
+}

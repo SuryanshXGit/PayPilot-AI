@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "updated_at": "2026-10-30T14:30:00Z",
+    "data_source": "simulated",
+    "disclaimer": "Comparison dimensions, reliability metrics, and compromise scores are curated for demonstration of multi-attribute trade-off reasoning.",
+    "owner": "Sehaj (Product Data & Testing Lead)"
+  },
+  "matrices": {
+    "dorm_essentials": {
+      "categories": ["desk_lamp", "portable_steamer", "earbuds"],
+      "comparison_criteria": [
+        {"key": "price", "label": "Price", "unit": "USD", "direction": "lower_is_better"},
+        {"key": "reliability_score", "label": "Reliability Score", "unit": "/10", "direction": "higher_is_better"},
+        {"key": "rating", "label": "Customer Rating", "unit": "/5", "direction": "higher_is_better"}
+      ],
+      "dorm_specific_weights": {
+        "reliability": 0.40,
+        "price_efficiency": 0.35,
+        "space_efficiency": 0.15,
+        "ease_of_use": 0.10
+      },
+      "bundle_evaluations": [
+        {
+          "bundle_id": "bundle-dorm-recommended",
+          "name": "Optimal Reliability & Value Bundle",
+          "target_budget": 150.00,
+          "items": ["lamp-01", "steamer-01", "buds-01"],
+          "total_price": 111.48,
+          "budget_remaining": 38.52,
+          "is_under_budget": true,
+          "average_reliability": 8.97,
+          "trade_off_explanation": "Balances high build reliability across all 3 essentials while remaining $38.52 under the $150 budget limit. The LuminaFlex architect lamp saves desk area with its clamp, SteamGlide heats up quickly for fast morning prep, and SoundPulse ANC suppresses library/dorm chatter without exceeding budget.",
+          "compromise_summary": "Lamp requires a desk edge to clamp; steamer reservoir requires refill after 2-3 garments."
+        },
+        {
+          "bundle_id": "bundle-dorm-budget",
+          "name": "Maximum Savings Bundle",
+          "target_budget": 150.00,
+          "items": ["lamp-02", "steamer-02", "buds-02"],
+          "total_price": 74.98,
+          "budget_remaining": 75.02,
+          "is_under_budget": true,
+          "average_reliability": 7.23,
+          "trade_off_explanation": "Maximizes remaining cash with a total cost under $75.00, but sacrifices build materials, noise reduction depth, and warranty length.",
+          "compromise_summary": "Plastic gooseneck lamp with single light mode, 25dB basic ANC, and steamer with potential horizontal water sputter."
+        },
+        {
+          "bundle_id": "bundle-dorm-overbudget",
+          "name": "Unconstrained Premium Bundle",
+          "target_budget": 150.00,
+          "items": ["lamp-03", "steamer-03", "buds-03"],
+          "total_price": 181.99,
+          "budget_remaining": -31.99,
+          "is_under_budget": false,
+          "average_reliability": 9.57,
+          "budget_guard_flags": [
+            "CRITICAL: Bundle exceeds maximum budget constraint of $150.00 by $31.99 (21.3% over budget).",
+            "ALTERNATIVE SUGGESTION: Replace buds-03 ($95.00) with buds-01 ($54.99) to bring total to $141.98 and satisfy budget guard."
+          ],
+          "trade_off_explanation": "Top-tier performance in every category, but fails the user's non-negotiable budget constraint.",
+          "compromise_summary": "Exceeds student budget. Requires explicit trade-off compromise to fit within $150."
+        }
+      ]
+    },
+    "emergency_laptop": {
+      "categories": ["emergency_laptop"],
+      "comparison_criteria": [
+        {"key": "price", "label": "Out-of-Pocket Cost", "unit": "USD", "direction": "lower_is_better"},
+        {"key": "reliability_score", "label": "Hardware Reliability", "unit": "/10", "direction": "higher_is_better"},
+        {"key": "shipping_speed", "label": "Delivery Urgency", "direction": "faster_is_better"},
+        {"key": "os_capability", "label": "Work Software Compatibility", "direction": "higher_is_better"}
+      ],
+      "emergency_trade_off_analysis": [
+        {
+          "item_id": "laptop-01",
+          "headline": "Best Balance for Immediate Work Continuity",
+          "trade_off_summary": "ThinkPad T490 provides 16GB RAM and full Windows 11 compatibility for $289.00 with next-day guaranteed arrival ($15). Refurbished cosmetic condition is traded off for business-grade durability and keyboard reliability."
+        },
+        {
+          "item_id": "laptop-02",
+          "headline": "Brand New Modern Hardware at Higher Cost",
+          "trade_off_summary": "Acer Swift 3 offers brand new condition and fast 6-core CPU for $429.00, but takes 2 days for delivery and costs $140 more."
+        },
+        {
+          "item_id": "laptop-03",
+          "headline": "Emergency Low-Cost Temporary Solution",
+          "trade_off_summary": "Chromebook CX1 costs only $149.00 and can arrive tomorrow, but ChromeOS limits software to web applications."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPilot AI — AI Shopping Assistant & Chatbot (Shubhneet)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="brand">
+        <div class="brand-badge-ai">AI</div>
+        <div>
+          <h1>PayPilot AI <span class="badge">Chatbot & Reasoning Engine</span></h1>
+          <p class="subtitle">Module Owner: Shubhneet • AI Intent Parsing, Multi-Item Reasoning, Voice Commands & Smart Filter</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <span id="backend-status-pill" class="status-pill offline">Checking Backend...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs" role="tablist">
+    <button class="tab-btn active" data-tab="tab-chat" role="tab" aria-selected="true">
+      💬 AI Shopping Chatbot
+    </button>
+    <button class="tab-btn" data-tab="tab-optimizer" role="tab" aria-selected="false">
+      ⚡ Multi-Item Reasoning Engine
+    </button>
+    <button class="tab-btn" data-tab="tab-voice" role="tab" aria-selected="false">
+      🎙️ Hands-Free Voice Commands
+    </button>
+    <button class="tab-btn" data-tab="tab-filter" role="tab" aria-selected="false">
+      🛡️ Zero-Spam Financial Filter
+    </button>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    <!-- TAB 1: AI SHOPPING CHATBOT -->
+    <section id="tab-chat" class="tab-pane active" role="tabpanel">
+      <div class="chat-layout">
+        <!-- Chat Dialogue Column -->
+        <div class="chat-column card">
+          <div class="chat-header">
+            <div>
+              <h3>AI Shopping Assistant (Idea 05)</h3>
+              <p class="text-muted">Natural language multi-constraint reasoning with deterministic calculations</p>
+            </div>
+            <button id="btn-reset-chat" class="btn-sm btn-outline">Reset Session</button>
+          </div>
+
+          <!-- Suggested Demo Prompts -->
+          <div class="quick-chips-container">
+            <span class="chips-label">Demo Scenarios:</span>
+            <button class="chip-btn" data-prompt="I'm a college student moving into an unfurnished dorm with a strict $150 total budget. I need a desk lamp, a portable steamer, and noise-cancelling study buds. Prioritize reliability and explain compromises.">
+              🎓 College Dorm ($150)
+            </button>
+            <button class="chip-btn" data-prompt="My work laptop broke and I need an urgent replacement under $500 with guaranteed 1-day delivery and strong warranty.">
+              🚨 Emergency Laptop ($500)
+            </button>
+            <button class="chip-btn" data-prompt="Why did you pick TaoTronics desk lamp instead of BenQ?">
+              ⚖️ Why TaoTronics vs BenQ?
+            </button>
+            <button class="chip-btn" data-prompt="What if my budget is only $120?">
+              📉 What if budget is $120?
+            </button>
+            <button class="chip-btn" data-prompt="Can I pay using PayPal Pay in 4 installments?">
+              💳 PayPal Pay in 4 Info
+            </button>
+            <button class="chip-btn" data-prompt="Proceed to checkout with PayPal Sandbox">
+              🛒 Proceed to Checkout
+            </button>
+          </div>
+
+          <!-- Chat Messages Scroll Area -->
+          <div id="chat-messages" class="chat-messages-box">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Chat Input Form -->
+          <form id="chat-input-form" class="chat-input-row">
+            <input type="text" id="chat-user-input" class="chat-input" placeholder="Ask PayPilot AI or describe your shopping needs..." autocomplete="off" />
+            <button type="submit" id="chat-send-btn" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+
+        <!-- Active Recommendation & Budget Guard Side Inspector -->
+        <div class="inspector-column card">
+          <div class="card-header">
+            <h3>Active Recommendation & Budget Guard</h3>
+            <span id="budget-guard-badge" class="badge-guard verified">Verified Math</span>
+          </div>
+
+          <div id="active-bundle-summary">
+            <p class="text-muted" style="padding: 20px 0; text-align: center;">
+              Send a prompt or select a demo scenario to see AI bundle recommendations and mathematical verification.
+            </p>
+          </div>
+
+          <!-- Trade-off Explanations Container -->
+          <div class="tradeoff-card">
+            <h4>AI Trade-Off Explanations & Compromises</h4>
+            <div id="chat-tradeoff-list" class="tradeoff-list">
+              <p class="text-muted text-sm">Trade-off rationales will appear here after optimization.</p>
+            </div>
+          </div>
+
+          <!-- Hackathon Guardrails Compliance Box -->
+          <div class="guardrail-box">
+            <h4>🛡️ Hackathon Guardrails Notice</h4>
+            <ul class="guardrail-list text-xs">
+              <li><strong>Zero Hallucinations:</strong> Prices, totals, and differences are computed with strict arithmetic from verified SQLite catalogue records.</li>
+              <li><strong>Transparent Source:</strong> All catalogue items carry <em>Controlled Catalogue Price (Verified Retail Benchmark)</em>.</li>
+              <li><strong>Pay in 4:</strong> Mentioned only with explicit disclosure of credit eligibility and total obligation transparency.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: MULTI-ITEM REASONING ENGINE (IDEA 10) -->
+    <section id="tab-optimizer" class="tab-pane" role="tabpanel">
+      <div class="optimizer-layout">
+        <!-- Input Controls -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h3>Multi-Item Budget Optimizer (Idea 10)</h3>
+          <p class="text-muted" style="margin-bottom: 16px;">
+            Balances multi-constraint baskets, evaluates full Cartesian search spaces, and generates ranked alternative combinations.
+          </p>
+
+          <div class="grid-form">
+            <div class="form-group">
+              <label for="opt-categories">Requested Categories:</label>
+              <input type="text" id="opt-categories" class="form-input" value="desk_lamp, portable_steamer, noise_cancelling_earbuds" />
+              <small class="text-muted">Comma-separated: desk_lamp, portable_steamer, noise_cancelling_earbuds, laptop, medical_equipment</small>
+            </div>
+
+            <div class="form-group">
+              <label for="opt-budget">Stated Budget ($ USD):</label>
+              <input type="number" id="opt-budget" class="form-input" value="150.00" step="5" />
+            </div>
+
+            <div class="form-group">
+              <label for="opt-priority">Optimization Priority:</label>
+              <select id="opt-priority" class="form-select">
+                <option value="reliability" selected>High Reliability (Recommended)</option>
+                <option value="cost">Lowest Cost (Budget-Saver)</option>
+                <option value="delivery_speed">Urgent Delivery (1-Day Express)</option>
+                <option value="warranty">Longest Warranty Protection</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="display: flex; align-items: flex-end;">
+              <button id="btn-run-optimizer" class="btn btn-primary" style="width: 100%; height: 42px;">
+                ⚡ Run Multi-Item Optimizer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundles Comparison Matrix -->
+        <div id="optimizer-matrix-container">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: HANDS-FREE VOICE COMMANDS (IDEA 02) -->
+    <section id="tab-voice" class="tab-pane" role="tabpanel">
+      <div class="voice-layout">
+        <div class="card">
+          <h3>Hands-Free Voice Commands (Idea 02)</h3>
+          <p class="text-muted" style="margin-bottom: 20px;">
+            Voice input for shopping requests with mandatory user confirmation before payment-related actions.
+          </p>
+
+          <!-- Voice Mic & Simulation Row -->
+          <div class="voice-control-center">
+            <button id="btn-voice-mic" class="mic-button" title="Start listening (Web Speech API)">
+              <span class="mic-icon">🎙️</span>
+              <span id="mic-label">Click to Speak</span>
+            </button>
+            <div class="voice-transcript-display">
+              <span class="text-muted text-xs">Interpreted Speech:</span>
+              <p id="voice-live-text" class="voice-transcript-text">"Click the microphone or choose a voice prompt below..."</p>
+            </div>
+          </div>
+
+          <!-- Quick Spoken Utterances -->
+          <div style="margin: 24px 0;">
+            <h4>Simulate Spoken Commands:</h4>
+            <div class="chips-container" style="margin-top: 10px;">
+              <button class="voice-chip-btn" data-spoken="Optimize college dorm move in for lamp steamer and study buds under 150 dollars">
+                🗣️ "Optimize college dorm under $150"
+              </button>
+              <button class="voice-chip-btn" data-spoken="My work laptop broke need urgent replacement under 500">
+                🗣️ "Broken laptop under $500"
+              </button>
+              <button class="voice-chip-btn" data-spoken="Check my budget and calculate total">
+                🗣️ "Check my budget"
+              </button>
+              <button class="voice-chip-btn" data-spoken="Make it cheaper switch to budget saver">
+                🗣️ "Make it cheaper"
+              </button>
+              <button class="voice-chip-btn" data-spoken="Toggle high contrast accessibility mode">
+                🗣️ "Toggle high contrast mode"
+              </button>
+              <button class="voice-chip-btn voice-chip-danger" data-spoken="Checkout and pay with PayPal">
+                ⚠️ "Checkout and pay with PayPal"
+              </button>
+            </div>
+          </div>
+
+          <!-- Command Result Box -->
+          <div id="voice-result-box" class="voice-result-card hidden">
+            <div class="result-header">
+              <h4>Voice Intent Analysis & Safety Audit</h4>
+              <span id="voice-action-badge" class="badge">ACTION</span>
+            </div>
+            <div id="voice-result-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: ZERO-SPAM FINANCIAL SMART FILTER (IDEA 07) -->
+    <section id="tab-filter" class="tab-pane" role="tabpanel">
+      <div class="filter-layout">
+        <!-- Sample Messages Column -->
+        <div class="card">
+          <h3>Zero-Spam Financial Smart Filter (Idea 07)</h3>
+          <p class="text-muted" style="margin-bottom: 16px;">
+            Classifies sample and user-submitted financial messages as <strong>Important</strong>, <strong>Promotional</strong>, <strong>Suspicious</strong>, or <strong>Needs Review</strong>.
+          </p>
+
+          <div class="guardrail-alert">
+            <strong>Checklist Compliance:</strong> Messages are <em>never silently deleted</em>, and the system never claims definitive 100% fraud detection. Clear warning signs are explained transparently.
+          </div>
+
+          <h4 style="margin: 20px 0 10px;">Select Sample Message to Inspect:</h4>
+          <div id="filter-samples-list" class="samples-list">
+            <!-- Populated dynamically -->
+          </div>
+
+          <h4 style="margin: 24px 0 10px;">Or Test Custom Message:</h4>
+          <div class="form-group">
+            <label for="filter-input-sender">Sender Address / Phone:</label>
+            <input type="text" id="filter-input-sender" class="form-input" placeholder="e.g. service@paypal-security.xyz" />
+          </div>
+          <div class="form-group">
+            <label for="filter-input-subject">Subject Line:</label>
+            <input type="text" id="filter-input-subject" class="form-input" placeholder="e.g. URGENT: Account Suspended" />
+          </div>
+          <div class="form-group">
+            <label for="filter-input-body">Message Body:</label>
+            <textarea id="filter-input-body" class="form-textarea" rows="4" placeholder="Paste full message text here..."></textarea>
+          </div>
+          <button id="btn-run-filter" class="btn btn-primary" style="width: 100%;">
+            🔍 Analyze Message with Smart Filter
+          </button>
+        </div>
+
+        <!-- Filter Analysis Result Column -->
+        <div class="card">
+          <h3>Filter Heuristic Assessment</h3>
+          <div id="filter-result-container">
+            <p class="text-muted" style="padding: 40px 0; text-align: center;">
+              Select a sample or submit a message to see security classifications, risk levels, and warning sign breakdowns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL: Explicit Confirmation Safeguard (Idea 02 Safety Checklist) -->
+  <div id="voice-confirmation-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-icon-warn">⚠️</span>
+        <h3 id="modal-title">Payment Confirmation Required</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modal-confirm-text" class="modal-main-prompt">
+          Voice commands require explicit confirmation before payment-related actions.
+        </p>
+        <div class="modal-info-box">
+          <p><strong>Order Amount:</strong> <span id="modal-order-amount">$137.97 USD</span></p>
+          <p><strong>Provider:</strong> PayPal Sandbox (Controlled Environment)</p>
+          <p class="text-xs text-muted" style="margin-top: 6px;">
+            Guardrail: Voice input alone cannot trigger money movement. An explicit manual or affirmative confirmation is mandated.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="modal-btn-cancel" class="btn btn-outline">Cancel</button>
+        <button id="modal-btn-confirm" class="btn btn-primary">Yes, Authorize Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

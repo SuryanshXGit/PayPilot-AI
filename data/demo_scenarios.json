@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "updated_at": "2026-10-30T14:30:00Z",
+    "owner": "Sehaj (Product Data & Testing Lead)",
+    "description": "Curated test and live demonstration scenarios for the PayPal AI Hackathon presentation."
+  },
+  "scenarios": [
+    {
+      "id": "scenario-01-dorm-bundle",
+      "name": "Core Jaw-Dropping Demo: Multi-Item Dorm Room Budget Optimizer",
+      "persona": "College student moving into an unfurnished dorm",
+      "prompt": "I’m a college student moving into an unfurnished dorm with a strict $150 total budget. I need a desk lamp, a portable steamer, and noise-cancelling study buds. Prioritize reliability and explain compromises.",
+      "constraints": {
+        "budget_max": 150.00,
+        "currency": "USD",
+        "categories_required": ["desk_lamp", "portable_steamer", "earbuds"],
+        "primary_objective": "reliability",
+        "strict_budget_enforcement": true
+      },
+      "expected_ai_output": {
+        "recommended_bundle": {
+          "items": ["lamp-01", "steamer-01", "buds-01"],
+          "calculated_total": 111.48,
+          "budget_remaining": 38.52,
+          "status": "APPROVED_BY_BUDGET_GUARD"
+        },
+        "reasoning": "Selected LuminaFlex clamp lamp ($29.99, 9.2/10 reliability) for durable metal arm and zero desk footprint; SteamGlide travel steamer ($26.50, 8.8/10 reliability) for quick 25s heat-up; and SoundPulse ANC buds ($54.99, 8.9/10 reliability) for 35dB noise attenuation suited for study halls. Total is $111.48, leaving $38.52 safety buffer under the $150 limit.",
+        "compromises_explained": [
+          "LuminaFlex requires a table edge to clamp onto.",
+          "SteamGlide 120ml tank requires refilling after 2-3 shirts.",
+          "Opted for SoundPulse ($54.99) instead of Studio Pro ($95.00) because the $95 buds would push the bundle near or over limit."
+        ],
+        "alternative_shown": {
+          "name": "Higher-Tier Audio Alternative",
+          "items": ["lamp-01", "steamer-01", "buds-03"],
+          "calculated_total": 166.99,
+          "status": "FLAGGED_OVER_BUDGET",
+          "over_amount": 16.99,
+          "budget_guard_action": "Requires user confirmation or substitution"
+        }
+      },
+      "paypal_checkout_fixture": {
+        "order_request": {
+          "intent": "CAPTURE",
+          "purchase_units": [
+            {
+              "reference_id": "dorm_bundle_001",
+              "description": "PayPilot AI Dorm Essentials Bundle",
+              "amount": {
+                "currency_code": "USD",
+                "value": "111.48",
+                "breakdown": {
+                  "item_total": {"currency_code": "USD", "value": "111.48"},
+                  "shipping": {"currency_code": "USD", "value": "0.00"},
+                  "tax_total": {"currency_code": "USD", "value": "0.00"}
+                }
+              },
+              "items": [
+                {"name": "LuminaFlex Clamp LED Architect Desk Lamp", "unit_amount": {"currency_code": "USD", "value": "29.99"}, "quantity": "1", "category": "PHYSICAL_GOODS"},
+                {"name": "SteamGlide Foldable Travel Garment Steamer", "unit_amount": {"currency_code": "USD", "value": "26.50"}, "quantity": "1", "category": "PHYSICAL_GOODS"},
+                {"name": "SoundPulse Neo Hybrid ANC Study Earbuds", "unit_amount": {"currency_code": "USD", "value": "54.99"}, "quantity": "1", "category": "PHYSICAL_GOODS"}
+              ]
+            }
+          ]
+        },
+        "simulated_created_response": {
+          "id": "PAYPAL-ORDER-DORM-789123",
+          "status": "CREATED",
+          "links": [
+            {"href": "https://www.sandbox.paypal.com/checkoutnow?token=PAYPAL-ORDER-DORM-789123", "rel": "approve", "method": "GET"}
+          ]
+        },
+        "simulated_captured_response": {
+          "id": "PAYPAL-ORDER-DORM-789123",
+          "status": "COMPLETED",
+          "purchase_units": [
+            {
+              "payments": {
+                "captures": [
+                  {
+                    "id": "CAPTURE-DORM-445566",
+                    "status": "COMPLETED",
+                    "amount": {"currency_code": "USD", "value": "111.48"},
+                    "final_capture": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "scenario-02-emergency-expense",
+      "name": "Secondary Demo: Emergency Broken Laptop Replacement",
+      "persona": "Remote worker / student with broken laptop 24 hours before a major project deadline",
+      "prompt": "My work laptop died this morning and I have a project due in 48 hours. I need a reliable replacement laptop urgently. Budget is around $300-$350. Compare options and delivery times.",
+      "constraints": {
+        "budget_max": 350.00,
+        "currency": "USD",
+        "category": "emergency_laptop",
+        "delivery_deadline": "Within 24-48 hours",
+        "strict_disclaimer": "No medical/legal advice, no guaranteed financing promises"
+      },
+      "expected_ai_output": {
+        "recommended_choice": {
+          "item_id": "laptop-01",
+          "item_name": "Lenovo ThinkPad T490 (Refurbished)",
+          "laptop_price": 289.00,
+          "shipping_tier": "Next-Day Urgent Delivery",
+          "shipping_cost": 15.00,
+          "total_price": 304.00,
+          "warranty_info": "1-Year Certified Refurbished Warranty (simulated)",
+          "delivery_time": "Guaranteed arrival tomorrow"
+        },
+        "reasoning": "ThinkPad T490 provides full Windows 11 compatibility and 16GB RAM for multitasking, fitting comfortably inside the $350 budget at $304 total with overnight shipping.",
+        "compromises_explained": [
+          "Item is certified refurbished with minor cosmetic wear.",
+          "Brand new Acer Swift 3 costs $429.00 (exceeds $350 budget).",
+          "Chromebook CX1 is $149 but cannot run desktop Windows applications."
+        ]
+      },
+      "paypal_checkout_fixture": {
+        "order_request": {
+          "intent": "CAPTURE",
+          "purchase_units": [
+            {
+              "reference_id": "emergency_laptop_001",
+              "description": "PayPilot AI Urgent Replacement Laptop",
+              "amount": {
+                "currency_code": "USD",
+                "value": "304.00",
+                "breakdown": {
+                  "item_total": {"currency_code": "USD", "value": "289.00"},
+                  "shipping": {"currency_code": "USD", "value": "15.00"},
+                  "tax_total": {"currency_code": "USD", "value": "0.00"}
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
