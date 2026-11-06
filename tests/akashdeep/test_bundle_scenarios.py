@@ -1,6 +1,6 @@
 """
 test_bundle_scenarios.py - Multi-Item Dorm Room Budget Optimizer Test Suite
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 
 Validates:
 - $150 College Student Dorm Room prompt constraints

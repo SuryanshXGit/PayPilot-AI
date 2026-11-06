@@ -1,6 +1,6 @@
 """
 PayPilot AI - Hands-Free Voice Command Processor (Idea 02)
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Processes natural speech / transcribed voice input:
 - Maps natural spoken phrases to application actions (bundle optimization, navigation, swaps)

@@ -6,7 +6,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host " PAYPILOT AI 2.0 - HACKATHON DEMO LAUNCHER                            " -ForegroundColor Cyan
-Write-Host " Built by PayPilot AI Team (Meenal, Jaskaran, Shubhneet, Suryansh, Sehaj)" -ForegroundColor Cyan
+Write-Host " Built by PayPilot AI Team (Akashdeep, Jaskaran, Suryansh)" -ForegroundColor Cyan
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host ""
 

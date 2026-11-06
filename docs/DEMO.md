@@ -1,6 +1,6 @@
 # PayPilot AI 2.0 — Hackathon Demo Script & Presentation Guide
 
-> **Lead / Owner**: Sehaj (Product Data, Comparison & Testing Lead)
+> **Lead / Owner**: Akashdeep (Product Data, Comparison & Testing Lead)
 > **Presentation Duration**: 3 Minutes (Target Hackathon Pitch)
 > **Core Theme**: "Budget-Aware AI Shopping with Verified PayPal Sandbox Checkout"
 

@@ -3,7 +3,7 @@ title PayPilot AI 2.0 - Demo & Test Launcher
 cls
 echo ======================================================================
 echo  PAYPILOT AI 2.0 - HACKATHON DEMO LAUNCHER
-echo  Built by PayPilot AI Team (Meenal, Jaskaran, Shubhneet, Suryansh, Sehaj)
+echo  Built by PayPilot AI Team (Akashdeep, Jaskaran, Suryansh)
 echo ======================================================================
 echo.
 echo [1/2] Running automated scenario and guardrail tests...

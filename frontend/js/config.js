@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Configuration
- * Module: Meenal (Frontend)
+ * Module: Suryansh (Frontend)
  */
 
 const CONFIG = {

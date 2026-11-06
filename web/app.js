@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — AI Assistant & Chatbot Client Application
- * Module Owner: Shubhneet
+ * Module Owner: Jaskaran
  */
 
 const API_BASE = "http://127.0.0.1:5001";

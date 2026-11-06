@@ -1,6 +1,6 @@
 """
 Unit tests for AIIntentParser
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 """
 
 import pytest

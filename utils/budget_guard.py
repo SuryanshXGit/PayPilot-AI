@@ -1,6 +1,6 @@
 """
 budget_guard.py - Deterministic Budget Verification & Guard Engine
-Owned by Sehaj (Product Data, Comparison & Testing Lead) / Jaskaran (Flask Backend & Budget Guard)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead) / Jaskaran (Flask Backend & Budget Guard)
 
 Core Principles:
 1. Deterministic arithmetic: NEVER let an LLM hallucinate financial totals or hide shortfalls.

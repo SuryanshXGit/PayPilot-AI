@@ -1,6 +1,6 @@
 """
 PayPilot AI - Zero-Spam Financial Smart Filter (Idea 07)
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Classifies sample / user-submitted financial messages (SMS, push, emails):
 - Categories: IMPORTANT, PROMOTIONAL, SUSPICIOUS, NEEDS_REVIEW

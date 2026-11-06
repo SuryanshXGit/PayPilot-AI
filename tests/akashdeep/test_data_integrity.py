@@ -1,6 +1,6 @@
 """
 test_data_integrity.py - Catalogue Data Provenance & Guardrails Test Suite
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 
 Validates:
 - Strict data provenance labelling (live, sourced, manually entered, or simulated)

@@ -1,7 +1,7 @@
 """
 =============================================================================
 PayPilot AI 2.0 — End-to-End AI Assistant & Reasoning Demonstration
-Module Owner: Shubhneet (AI Intent Parsing, Product Ranking, Chatbot, Voice, Smart Filter)
+Module Owner: Jaskaran (AI Intent Parsing, Product Ranking, Chatbot, Voice, Smart Filter)
 =============================================================================
 
 Executes a live walkthrough of:
@@ -185,7 +185,7 @@ def run_demo():
         print(f"  • Disclaimer               : {res_filter['guardrail_disclaimer']}")
 
         print("\n" + "=" * 80)
-        print("  SHUBHNEET AI DEMONSTRATION COMPLETED SUCCESSFULLY")
+        print("  JASKARAN AI DEMONSTRATION COMPLETED SUCCESSFULLY")
         print("=============================================================================\n")
 
 

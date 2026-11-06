@@ -39,24 +39,22 @@ flowchart LR
 
 ---
 
-## 👥 Five-Member Team Work Division (Changes in Bold)
+## 👥 Three-Member Team Work Division (Changes in Bold)
 
-All five teammates collaborated in this single, unified repository with explicitly defined module ownership:
+All three teammates collaborated in this single, unified repository with explicitly defined module ownership:
 
 | Member | Previous / Base Role | Updated Responsibilities | Hackathon Change & Deliverable |
 | :--- | :--- | :--- | :--- |
-| **Meenal** | Frontend/dashboard and accessibility | Frontend/dashboard, product cards, comparison, accessibility controls (WCAG AAA high contrast, scalable typography, TTS, ARIA announcer), and checkout screens; connects UI to backend APIs and renders multi-item bundle totals. | **Clear ownership of the full shopping UI and bundle comparison.** |
-| **Jaskaran** | Flask backend/database, records, bill reminders | Flask backend, SQLite schema/seeding, catalogue, trusted product prices, product/bill APIs, and Budget Guard calculations; calculates bundle totals and flags over-budget options using known values. | **Backend priority shifts to catalogue + Budget Guard; reminders are non-blocking.** |
-| **Shubhneet** | AI chatbot, voice commands, notification filter | AI intent parsing, product ranking, recommendations and trade-off explanations; handles multi-constraint prompts and trade-offs across several items; voice input; zero-spam financial filter. | **Multi-item reasoning is core; voice/filter are staged.** |
-| **Suryansh** *(You)* | PayPal integration and security | PayPal Sandbox Orders v2 create → buyer approval → capture → server-side verification; anti-tampering guards, error/cancellation handling, Pay in 4 compliance calculator, and end-to-end integration coordination. | **Payment verification and integration coordination are explicit deliverables.** |
-| **Sehaj** | Product data, comparison/charts, testing | Product/sample price data and history labels; tests bundle, emergency-expense, and checkout scenarios; owns master README, open-source licence, setup notes, and demo readiness. | **Testing, documentation/licensing, and demo readiness are explicit deliverables.** |
+| **Suryansh** *(You)* | Frontend/dashboard, accessibility & PayPal integration | Frontend/dashboard, product cards, comparison, accessibility controls (WCAG AAA high contrast, scalable typography, TTS, ARIA announcer), and checkout screens; connects UI to backend APIs and renders multi-item bundle totals. PayPal Sandbox Orders v2 create → buyer approval → capture → server-side verification; anti-tampering guards, error/cancellation handling, Pay in 4 compliance calculator, and end-to-end integration coordination. | **Clear ownership of the full shopping UI, bundle comparison, payment verification, and integration coordination.** |
+| **Jaskaran** | Flask backend/database, Budget Guard & AI chatbot | Flask backend, SQLite schema/seeding, catalogue, trusted product prices, product/bill APIs, and Budget Guard calculations; AI intent parsing, product ranking, recommendations and trade-off explanations; handles multi-constraint prompts and trade-offs across several items; voice input; zero-spam financial filter. | **Backend priority on catalogue + Budget Guard, and multi-item AI reasoning is core.** |
+| **Akashdeep** | Product data, comparison/charts, testing | Product/sample price data and history labels; tests bundle, emergency-expense, and checkout scenarios; owns master README, open-source licence, setup notes, and demo readiness. | **Testing, documentation/licensing, and demo readiness are explicit deliverables.** |
 
 Detailed individual module documentation:
-- 📖 [Meenal's Frontend & Accessibility Documentation](docs/MODULE_MEENAL.md)
-- 📖 [Jaskaran's Backend & Budget Guard Documentation](docs/MODULE_JASKARAN.md)
-- 📖 [Shubhneet's AI Reasoning Engine Documentation](docs/MODULE_SHUBHNEET.md)
+- 📖 [Suryansh's Frontend & Accessibility Documentation](docs/MODULE_SURYANSH_FRONTEND.md)
 - 📖 [Suryansh's PayPal Integration & Security Documentation](docs/MODULE_SURYANSH.md)
-- 📖 [Sehaj's Data, Testing & QA Documentation](docs/MODULE_SEHAJ.md)
+- 📖 [Jaskaran's Backend & Budget Guard Documentation](docs/MODULE_JASKARAN.md)
+- 📖 [Jaskaran's AI Reasoning Engine Documentation](docs/MODULE_JASKARAN_AI.md)
+- 📖 [Akashdeep's Data, Testing & QA Documentation](docs/MODULE_AKASHDEEP.md)
 
 ---
 
@@ -127,7 +125,7 @@ E:\PayPilot_AI_Final\
 ├── run.py                             # Unified Flask server launcher (Port 5001)
 ├── start_demo.ps1                     # 1-Click PowerShell Demo launcher (Tests + Browser)
 ├── start_demo.bat                     # 1-Click Windows batch demo launcher
-├── demo_shubhneet_ai.py               # Standalone AI reasoning & chatbot demo script
+├── demo_jaskaran_ai.py                # Standalone AI reasoning & chatbot demo script
 ├── demo_suryansh_integration.py       # Standalone PayPal Sandbox & security demo script
 ├── requirements.txt                   # Production dependencies
 ├── LICENSE                            # MIT Open-Source License
@@ -163,7 +161,7 @@ E:\PayPilot_AI_Final\
 │       ├── financial_smart_filter.py  # Phishing & notification classification
 │       └── gemini_service.py          # Optional Google Gemini LLM provider fallback
 │
-├── frontend/                          # Meenal's Complete Web Shopping Interface
+├── frontend/                          # Suryansh's Complete Web Shopping Interface
 │   ├── index.html                     # Responsive 4-step shopping application
 │   ├── serve.ps1                      # Standalone frontend HTTP server
 │   ├── css/
@@ -181,16 +179,16 @@ E:\PayPilot_AI_Final\
 │   │   └── app.js                     # UI controller & scenario event handlers
 │   └── tests/
 │       ├── run_tests.html             # Browser-based automated test runner
-│       └── test_meenal_work.js        # 10 comprehensive frontend test suites
+│       └── test_suryansh_work.js      # 10 comprehensive frontend test suites
 │
-├── data/                              # Verified JSON Datasets (Owned by Sehaj)
+├── data/                              # Verified JSON Datasets (Owned by Akashdeep)
 │   ├── products.json                  # Controlled catalogue items with provenance
 │   ├── price_history.json             # 90-day price movements (simulated Honey trends)
 │   ├── sample_bills.json              # Upcoming bills due within 7 days
 │   ├── comparison_matrix.json         # Evaluation benchmarks & trade-offs
 │   └── demo_scenarios.json            # Hackathon scenarios & PayPal fixtures
 │
-├── utils/                             # Shared Data Loading & Math Utilities (Owned by Sehaj)
+├── utils/                             # Shared Data Loading & Math Utilities (Owned by Akashdeep)
 │   ├── data_loader.py                 # JSON ingestion with provenance verification
 │   ├── budget_guard.py                # Standalone deterministic arithmetic
 │   └── comparison_helper.py           # Side-by-side matrices & compromise summaries
@@ -198,21 +196,21 @@ E:\PayPilot_AI_Final\
 ├── docs/                              # Comprehensive Hackathon Materials
 │   ├── DEMO.md                        # Presentation & 3-minute pitch script
 │   ├── SETUP.md                       # Environment setup & developer guide
-│   ├── MODULE_MEENAL.md               # Frontend & accessibility details
+│   ├── MODULE_SURYANSH_FRONTEND.md    # Frontend & accessibility details
 │   ├── MODULE_JASKARAN.md             # Backend & Budget Guard details
-│   ├── MODULE_SHUBHNEET.md            # AI reasoning & chatbot details
+│   ├── MODULE_JASKARAN_AI.md          # AI reasoning & chatbot details
 │   ├── MODULE_SURYANSH.md             # PayPal Sandbox & security details
-│   └── MODULE_SEHAJ.md                # Data & testing details
+│   └── MODULE_AKASHDEEP.md            # Data & testing details
 │
 └── tests/                             # Automated Test Suites (84 Tests Passing)
     ├── conftest.py                    # Pytest test fixtures (isolated SQLite app)
     ├── run_tests.ps1                  # Native Windows PowerShell test runner (8 tests)
-    ├── sehaj/                         # Scenario & data integrity tests
+    ├── akashdeep/                     # Scenario & data integrity tests
     │   ├── test_bundle_scenarios.py
     │   ├── test_checkout_scenarios.py
     │   ├── test_data_integrity.py
     │   └── test_emergency_expense_scenarios.py
-    ├── shubhneet/                     # AI reasoning, chatbot, voice, bills, & API tests
+    ├── jaskaran/                      # AI reasoning, chatbot, voice, bills, & API tests
     │   ├── test_ai_api_routes.py
     │   ├── test_ai_conversational_assistant.py
     │   ├── test_ai_intent_parser.py
@@ -259,8 +257,8 @@ python run.py
 python -m pytest -v
 ```
 Validates:
-- 17 Sehaj scenario, integrity, and checkout tests
-- 58 Shubhneet AI intent, ranking, chatbot, voice, and API tests
+- 17 Akashdeep scenario, integrity, and checkout tests
+- 58 Jaskaran AI intent, ranking, chatbot, voice, and API tests
 - 9 Suryansh PayPal Sandbox checkout, anti-tampering, and Pay in 4 tests
 
 #### Option B: Zero-Dependency Native PowerShell Suite (8 Tests Passing)
@@ -268,16 +266,16 @@ Validates:
 powershell -ExecutionPolicy Bypass -File .\tests\run_tests.ps1
 ```
 
-#### Option C: Meenal's Interactive Frontend Test Suite (10 Suites Passing)
+#### Option C: Suryansh's Interactive Frontend Test Suite (10 Suites Passing)
 Open `frontend/tests/run_tests.html` in any browser or start `frontend/serve.ps1`.
 
 ---
 
 ### 4. Run Standalone Terminal Demonstrations
 
-#### Shubhneet's AI Reasoning Walkthrough:
+#### Jaskaran's AI Reasoning Walkthrough:
 ```bash
-python demo_shubhneet_ai.py
+python demo_jaskaran_ai.py
 ```
 Prints multi-turn dialogue, trade-offs, voice safety guardrails, and phishing classification directly to console.
 
@@ -317,7 +315,7 @@ Walks through order locking, PayPal Orders v2 creation, simulated buyer approval
 | `/api/orders/<id>/pay-in-4` | `GET` | Pay in 4 installment breakdown with required safety and credit disclosures. |
 | `/api/orders/verify-capture` | `POST` | Server capture verification against client-submitted details. |
 
-### 4. AI Shopping Assistant (Shubhneet)
+### 4. AI Shopping Assistant (Jaskaran)
 | Endpoint | Method | Description |
 | :--- | :--- | :--- |
 | `/api/ai/parse-intent` | `POST` | Parses natural language prompts into categories, budget, and priority. |

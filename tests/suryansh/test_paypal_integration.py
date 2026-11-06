@@ -213,7 +213,7 @@ def test_end_to_end_dorm_bundle_scenario(client):
     End-to-End Test: College Dorm Bundle ($150 Budget)
     AI Multi-Constraint Optimizer -> Budget Guard Verification -> PayPal Sandbox Checkout -> Captured.
     """
-    # 1. Shubhneet's Multi-Item Optimizer recommends the optimal dorm bundle
+    # 1. Jaskaran's Multi-Item Optimizer recommends the optimal dorm bundle
     opt_res = client.post("/api/budget-guard/optimize-bundle", json={
         "categories": ["desk_lamp", "portable_steamer", "noise_cancelling_earbuds"],
         "stated_budget": 150.00,

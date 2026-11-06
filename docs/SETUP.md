@@ -1,7 +1,7 @@
 # PayPilot AI 2.0 — Setup and Environment Guide
 
-> **Author / Module Owner**: Sehaj (Product Data, Comparison & Testing Lead)
-> **Target Audience**: Team Members (Meenal, Jaskaran, Shubhneet, Suryansh) & Hackathon Evaluators
+> **Author / Module Owner**: Akashdeep (Product Data, Comparison & Testing Lead)
+> **Target Audience**: Team Members (Akashdeep, Jaskaran, Suryansh) & Hackathon Evaluators
 > **Repository**: Single Unified Monorepo (`/Paypal`)
 
 ---
@@ -47,7 +47,7 @@ PAYPAL_CLIENT_ID=your_sandbox_client_id_here
 PAYPAL_CLIENT_SECRET=your_sandbox_client_secret_here
 PAYPAL_CURRENCY=USD
 
-# Gemini AI (Owned by Shubhneet)
+# Gemini AI (Owned by Jaskaran)
 GEMINI_API_KEY=your_gemini_api_key_here
 AI_MODEL_NAME=gemini-1.5-flash
 ```
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 ---
 
-## 3. Running the Test Suite (Owned by Sehaj)
+## 3. Running the Test Suite (Owned by Akashdeep)
 
 Before launching the servers or recording demos, verify that your environment passes all scenario guardrails and data validation tests.
 
@@ -87,7 +87,7 @@ Expected output:
 ```text
 ======================================================================
  PAYPILOT AI 2.0 - HACKATHON TEST SUITE (POWERSHELL RUNNER)
- Owned by Sehaj (Product Data, Comparison & Testing Lead)
+ Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 ======================================================================
 
  [PASS] Catalogue JSON exists and is valid
@@ -119,11 +119,9 @@ pytest -v tests/
 
 | Member | Primary Role | Core Files / Modules | Key API / Contract |
 | :--- | :--- | :--- | :--- |
-| **Meenal** | Frontend & UI | `frontend/`, `templates/`, `static/` | UI Components, product comparison cards, accessibility toggles |
-| **Jaskaran** | Backend & Budget Guard | `app.py`, `routes/`, `utils/budget_guard.py` | `GET /api/products`, `POST /api/budget/evaluate` |
-| **Shubhneet** | AI Chatbot & Intent Engine | `ai_service.py`, `prompts/` | `POST /api/chat/recommend` |
-| **Suryansh** | PayPal Sandbox & Security | `paypal_service.py`, `routes/checkout.py` | `POST /api/paypal/create-order`, `POST /api/paypal/capture-order` |
-| **Sehaj** | Data, Scenarios & Testing | `data/`, `tests/`, `utils/`, docs | Data provenance, bundle test fixtures, demo readiness |
+| **Suryansh** | Frontend UI & PayPal Sandbox Security | `frontend/`, `app/services/paypal_service.py`, `app/services/order_service.py` | UI Components, product comparison cards, accessibility toggles, `POST /api/orders/prepare`, `POST /api/orders/verify-capture` |
+| **Jaskaran** | Backend, Budget Guard & AI Reasoning Engine | `app/`, `app/services/ai_*.py`, `app/services/budget_guard.py` | `GET /api/products`, `POST /api/budget-guard/check`, `POST /api/ai/recommend-bundle`, `POST /api/ai/chat` |
+| **Akashdeep** | Data, Scenarios & Testing Lead | `data/`, `tests/`, `utils/`, docs | Data provenance, bundle test fixtures, demo readiness, scenario verification |
 
 ---
 

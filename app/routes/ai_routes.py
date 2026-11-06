@@ -1,6 +1,6 @@
 """
 PayPilot AI - AI & Chatbot REST API Routes
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Exposes REST endpoints for:
 - AI Intent Parsing (/api/ai/parse-intent)

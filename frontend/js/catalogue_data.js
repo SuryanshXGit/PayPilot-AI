@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Verified Catalogue & Benchmark Seed Dataset
- * Module: Meenal (Frontend / Dashboard & Comparison UI)
+ * Module: Suryansh (Frontend / Dashboard & Comparison UI)
  *
  * Hackathon Guardrails Compliance:
  * - All items carry explicit data_source and data_source_label.

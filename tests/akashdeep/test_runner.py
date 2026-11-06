@@ -1,6 +1,6 @@
 """
 test_runner.py - Consolidated Test Suite Runner
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 
 Executes all test suites:
 1. test_bundle_scenarios.py
@@ -28,7 +28,7 @@ def run_all_tests():
     suite.addTests(discovered)
 
     print("======================================================================")
-    print(" PAYPILOT AI 2.0 - AUTOMATED HACKATHON TEST SUITE (SEHAJ'S MODULE)    ")
+    print(" PAYPILOT AI 2.0 - AUTOMATED HACKATHON TEST SUITE (AKASHDEEP'S MODULE)")
     print("======================================================================")
     print(f"Running scenario and data integrity tests from: {test_dir}\n")
 

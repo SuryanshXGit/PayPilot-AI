@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Proactive Financial Health & Bill Manager UI
- * Module: Meenal (Bill Awareness Integration)
+ * Module: Suryansh (Bill Awareness Integration)
  *
  * Implements:
  * 1. User-recorded bill listing with 7-day proximity filter

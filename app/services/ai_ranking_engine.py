@@ -1,6 +1,6 @@
 """
 PayPilot AI - Multi-Constraint AI Product Ranking Engine
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Implements deterministic multi-objective ranking algorithms across products
 and multi-item bundles:

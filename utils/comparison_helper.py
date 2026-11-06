@@ -1,6 +1,6 @@
 """
 comparison_helper.py - Product Comparison & Trade-off Engine
-Owned by Sehaj (Product Data, Comparison & Testing Lead) / Meenal (Frontend/UI)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead) / Suryansh (Frontend/UI)
 
 Responsibilities:
 - Compare items side-by-side across key dimensions (price, reliability, rating, specs).

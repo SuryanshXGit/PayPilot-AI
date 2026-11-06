@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Budget Guard & Multi-Item Bundle Comparison UI
- * Module: Meenal (Shopping UI & Bundle Comparison Owner)
+ * Module: Suryansh (Shopping UI & Bundle Comparison Owner)
  *
  * Core Responsibilities:
  * 1. Multi-item basket management across categories (Lamp, Steamer, Earbuds, Laptops)

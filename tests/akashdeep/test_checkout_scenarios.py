@@ -1,6 +1,6 @@
 """
 test_checkout_scenarios.py - PayPal Sandbox Checkout & Verification Test Suite
-Owned by Sehaj (Product Data, Comparison & Testing Lead) / Suryansh (PayPal Integration & Security Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead) / Suryansh (PayPal Integration & Security Lead)
 
 Validates:
 - Complete PayPal flow: Create order -> Buyer approval -> Capture -> Server-side verification

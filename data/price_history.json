@@ -4,7 +4,7 @@
     "updated_at": "2026-10-30T14:30:00Z",
     "data_source": "simulated_historical_dataset",
     "disclaimer": "Simulated price movement history inspired by PayPal Honey capabilities. Strictly for hackathon demonstration. Not connected to live PayPal Honey API or live merchant scrapers.",
-    "owner": "Sehaj (Product Data & Testing Lead)"
+    "owner": "Akashdeep (Product Data & Testing Lead)"
   },
   "price_trends": {
     "lamp-01": {

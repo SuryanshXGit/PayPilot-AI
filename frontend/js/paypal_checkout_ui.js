@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — PayPal Sandbox Checkout & Payment Verification UI
- * Module: Meenal (Checkout Screens & Verification Flow)
+ * Module: Suryansh (Checkout Screens & Verification Flow)
  *
  * Stage 1: Order preparation and price locking
  * Stage 2: PayPal Sandbox order creation

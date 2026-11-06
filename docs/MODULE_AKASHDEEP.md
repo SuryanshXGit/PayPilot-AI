@@ -36,17 +36,15 @@ flowchart LR
 
 ---
 
-## 👥 Five-Member Team Work Division
+## 👥 Three-Member Team Work Division
 
 All team members collaborate in this unified repository with explicitly defined ownership:
 
 | Member | Previous / Base Role | Updated Responsibilities | Hackathon Focus |
 | :--- | :--- | :--- | :--- |
-| **Meenal** | Frontend/dashboard and accessibility | Frontend/dashboard, product cards, comparison views, accessibility controls, and checkout screens; connects UI to backend APIs and renders multi-item bundle totals. | Clear ownership of the full shopping UI and bundle comparison. |
-| **Jaskaran** | Flask backend/database, records, bill reminders | Flask backend, catalogue, trusted product prices, product/bill APIs, and Budget Guard calculations; calculates bundle totals and flags over-budget options using known values. | Priority shifts to catalogue + Budget Guard; reminders are non-blocking. |
-| **Shubhneet** | AI chatbot, voice commands, notification filter | AI intent parsing, product ranking, recommendations, and explanations; handles multi-constraint prompts and trade-offs across several items. | Multi-item reasoning is core; voice/filter staged later. |
-| **Suryansh** | PayPal integration and security | PayPal Sandbox create → buyer approval → capture → server-side verification; handles cancellation/errors and coordinates end-to-end integration. | Payment verification and integration coordination are explicit deliverables. |
-| **Sehaj** *(This Module)* | Product data, comparison/charts, testing | Product/sample price data and history labels; tests bundle, emergency-expense, and checkout scenarios; owns README, open-source licence, setup notes, and demo readiness. | Testing, documentation/licensing, and demo readiness are explicit deliverables. |
+| **Suryansh** | Frontend/dashboard, accessibility & PayPal integration | Frontend/dashboard, product cards, comparison views, accessibility controls, and checkout screens; connects UI to backend APIs and renders multi-item bundle totals. Coordinates PayPal Sandbox create → buyer approval → capture → server-side verification. | Clear ownership of the full shopping UI, payment verification, and integration coordination. |
+| **Jaskaran** | Backend, Budget Guard & AI Reasoning Engine | Flask backend, catalogue, trusted product prices, product/bill APIs, and Budget Guard calculations; AI intent parsing, product ranking, recommendations, and explanations; handles multi-constraint prompts and trade-offs. | Priority shifts to catalogue + Budget Guard and multi-item AI reasoning. |
+| **Akashdeep** *(This Module)* | Product data, comparison/charts, testing | Product/sample price data and history labels; tests bundle, emergency-expense, and checkout scenarios; owns README, open-source licence, setup notes, and demo readiness. | Testing, documentation/licensing, and demo readiness are explicit deliverables. |
 
 ---
 
@@ -106,25 +104,25 @@ PayPilot AI 2.0 strictly enforces the following hackathon compliance rules:
 
 ```text
 /Paypal
-├── README.md                          # Master documentation & project guide (Owned by Sehaj)
-├── LICENSE                            # MIT Open-Source License (Owned by Sehaj)
-├── SETUP.md                           # Comprehensive environment & developer notes (Owned by Sehaj)
-├── DEMO.md                            # Hackathon presentation & 3-minute pitch script (Owned by Sehaj)
+├── README.md                          # Master documentation & project guide (Owned by Akashdeep)
+├── LICENSE                            # MIT Open-Source License (Owned by Akashdeep)
+├── SETUP.md                           # Comprehensive environment & developer notes (Owned by Akashdeep)
+├── DEMO.md                            # Hackathon presentation & 3-minute pitch script (Owned by Akashdeep)
 ├── .env.example                       # Safe environment variables template
 ├── .gitignore                         # Git exclusion rules
 ├── requirements.txt                   # Backend & testing dependencies
-├── data/                              # Curated datasets with provenance labels (Owned by Sehaj)
+├── data/                              # Curated datasets with provenance labels (Owned by Akashdeep)
 │   ├── products.json                  # Catalogue items across categories with reliability scores & trade-offs
 │   ├── price_history.json             # 90-day price trends inspired by PayPal Honey
 │   ├── sample_bills.json              # 7-day upcoming bill fixtures for proactive monitoring
 │   ├── comparison_matrix.json         # Attribute matrix & bundle evaluations
 │   └── demo_scenarios.json            # Hackathon demo fixtures & PayPal payloads
-├── utils/                             # Core shared utility modules (Owned by Sehaj / Team)
+├── utils/                             # Core shared utility modules (Owned by Akashdeep / Team)
 │   ├── __init__.py
 │   ├── data_loader.py                 # Data ingestion with strict provenance verification
 │   ├── budget_guard.py                # Deterministic arithmetic, budget limits, & substitutions
 │   └── comparison_helper.py           # Trade-off explanation & side-by-side matrices
-└── tests/                             # Comprehensive test suite (Owned by Sehaj)
+└── tests/                             # Comprehensive test suite (Owned by Akashdeep)
     ├── __init__.py
     ├── test_bundle_scenarios.py       # Multi-item dorm room budget optimizer tests ($150 limit)
     ├── test_emergency_expense_scenarios.py # Urgent replacement & delivery speed tests
@@ -138,7 +136,7 @@ PayPilot AI 2.0 strictly enforces the following hackathon compliance rules:
 
 ## 🧪 Running the Tests
 
-Sehaj's test suite provides **100% automated verification** of all hackathon scenarios and guardrails.
+Akashdeep's test suite provides **100% automated verification** of all hackathon scenarios and guardrails.
 
 ### Native Windows PowerShell (No Setup Required)
 ```powershell

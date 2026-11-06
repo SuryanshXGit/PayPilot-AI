@@ -4,7 +4,7 @@
     "updated_at": "2026-10-30T14:30:00Z",
     "data_source": "manually_entered_sample",
     "disclaimer": "Sample user-entered bill records for testing Proactive Financial Health Monitoring. No direct bank account integration or unauthorized financial access implied.",
-    "owner": "Sehaj (Product Data & Testing Lead)"
+    "owner": "Akashdeep (Product Data & Testing Lead)"
   },
   "sample_bills": [
     {

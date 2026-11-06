@@ -1,7 +1,7 @@
-# PayPilot AI — Backend & Budget Guard Engine
+# PayPilot AI 2.0 — PayPal Integration, Security & Frontend UI
 **PayPal AI Hackathon 2026** • *PayPilot AI 2.0*
 
-> **Module Owner:** Jaskaran (Flask Backend, Catalogue, Trusted Prices, Product/Bill APIs, Budget Guard Engine)
+> **Module Owner:** Suryansh (PayPal Integration, Security, Order Verification & Shopping UI)
 
 ---
 
@@ -10,11 +10,9 @@
 PayPilot AI is a budget-aware shopping assistant that pairs natural language needs with **zero-hallucination, deterministic budget verification** and PayPal checkout.
 
 In accordance with the team work division:
-- **Jaskaran (This Backend)**: Provides the single source of truth for catalogue data, trusted prices, bill records, server-locked order preparations, and mathematical **Budget Guard** calculations.
-- **Meenal (Frontend)**: Consumes these endpoints to render shopping cards, bundle comparisons, accessibility controls, and checkout screens.
-- **Shubhneet (AI Chatbot)**: Connects natural language intent parsing with the `/api/budget-guard/optimize-bundle` and `/api/products` endpoints to deliver ranked options and explain trade-offs.
-- **Suryansh (PayPal Integration)**: Coordinates PayPal Sandbox checkout using `/api/orders/prepare` and server-side payment verification via `/api/orders/verify-capture`.
-- **Sehaj (Testing & QA)**: Validates seed datasets, emergency-expense flows, and test suites.
+- **Suryansh (This Module)**: Coordinates PayPal Sandbox checkout using `/api/orders/prepare` and server-side payment verification via `/api/orders/verify-capture`, provides full shopping UI, bundle comparisons, accessibility controls, and end-to-end integration.
+- **Jaskaran (Backend & AI Engine)**: Provides catalogue data, trusted prices, bill records, server-locked order preparations, mathematical **Budget Guard** calculations, and multi-item AI intent parsing & ranking.
+- **Akashdeep (Testing & QA)**: Validates seed datasets, emergency-expense flows, test suites, and documentation.
 
 ---
 

@@ -1,6 +1,6 @@
 """
 PayPilot AI - AI Trade-Off & Compromise Explanation Generator
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Generates context-rich, deterministic explanations of shopping trade-offs:
 - Explains why recommended items were selected over alternatives in their category.

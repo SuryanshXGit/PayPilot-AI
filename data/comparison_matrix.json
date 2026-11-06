@@ -4,7 +4,7 @@
     "updated_at": "2026-10-30T14:30:00Z",
     "data_source": "simulated",
     "disclaimer": "Comparison dimensions, reliability metrics, and compromise scores are curated for demonstration of multi-attribute trade-off reasoning.",
-    "owner": "Sehaj (Product Data & Testing Lead)"
+    "owner": "Akashdeep (Product Data & Testing Lead)"
   },
   "matrices": {
     "dorm_essentials": {

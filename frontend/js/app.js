@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Main Application Controller
- * Module: Meenal (Frontend / Dashboard & User Journey Integration)
+ * Module: Suryansh (Frontend / Dashboard & User Journey Integration)
  *
  * Implements:
  * 1. View routing (Dorm MVP Demo, Emergency Navigator, Catalogue, Comparison, Bills)

@@ -1,6 +1,6 @@
 """
 Integration tests for AI REST API endpoints (/api/ai/*)
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 """
 
 import json

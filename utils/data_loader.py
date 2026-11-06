@@ -1,6 +1,6 @@
 """
 data_loader.py - Product Catalogue & Data Loading Utility
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 
 Responsibilities:
 - Load catalogue items, price histories, bills, and demo scenarios from JSON.

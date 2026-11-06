@@ -1,6 +1,6 @@
 """
 PayPilot AI - Conversational Shopping Assistant (Idea 05)
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Implements an intelligent multi-turn conversational AI shopping assistant:
 - Maintains dialogue state (active items, stated budget, active priorities, history)

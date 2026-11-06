@@ -1,6 +1,6 @@
 """
 test_emergency_expense_scenarios.py - Emergency Expense & Urgent Replacement Test Suite
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 
 Validates:
 - Emergency laptop breakdown scenario

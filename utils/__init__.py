@@ -1,6 +1,6 @@
 """
 PayPilot AI 2.0 - Core Utilities Package
-Owned by Sehaj (Product Data, Comparison & Testing Lead)
+Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 """
 
 from .data_loader import DataLoader

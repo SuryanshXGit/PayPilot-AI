@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Hands-Free Voice Commands Controller
- * Module: Meenal (Hands-Free Voice Interface)
+ * Module: Suryansh (Hands-Free Voice Interface)
  *
  * Implements:
  * 1. Speech-to-Text input using Web Speech Recognition API

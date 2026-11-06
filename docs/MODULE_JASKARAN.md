@@ -10,11 +10,9 @@
 PayPilot AI is a budget-aware shopping assistant that pairs natural language needs with **zero-hallucination, deterministic budget verification** and PayPal checkout.
 
 In accordance with the team work division:
-- **Jaskaran (This Backend)**: Provides the single source of truth for catalogue data, trusted prices, bill records, server-locked order preparations, and mathematical **Budget Guard** calculations.
-- **Meenal (Frontend)**: Consumes these endpoints to render shopping cards, bundle comparisons, accessibility controls, and checkout screens.
-- **Shubhneet (AI Chatbot)**: Connects natural language intent parsing with the `/api/budget-guard/optimize-bundle` and `/api/products` endpoints to deliver ranked options and explain trade-offs.
-- **Suryansh (PayPal Integration)**: Coordinates PayPal Sandbox checkout using `/api/orders/prepare` and server-side payment verification via `/api/orders/verify-capture`.
-- **Sehaj (Testing & QA)**: Validates seed datasets, emergency-expense flows, and test suites.
+- **Jaskaran (This Backend & AI)**: Provides the single source of truth for catalogue data, trusted prices, bill records, server-locked order preparations, mathematical **Budget Guard** calculations, and natural language multi-item AI reasoning.
+- **Suryansh (Frontend & PayPal Integration)**: Consumes these endpoints to render shopping cards, bundle comparisons, accessibility controls, checkout screens, and coordinates PayPal Sandbox checkout with server-side payment verification.
+- **Akashdeep (Testing & QA)**: Validates seed datasets, emergency-expense flows, test suites, and documentation.
 
 ---
 
@@ -249,7 +247,7 @@ Suggests swap candidates when a selected bundle exceeds budget.
 
 ---
 
-### 4. Order Preparation & PayPal Verification APIs (for Suryansh & Meenal)
+### 4. Order Preparation & PayPal Verification APIs (for Suryansh)
 
 #### `POST /api/orders/prepare`
 Locks catalogue items and prices on the server, generating an order ID and PayPal Orders v2 payload.

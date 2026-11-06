@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — API Client Layer
- * Module: Meenal (Frontend / Backend Connection)
+ * Module: Suryansh (Frontend / Backend Connection)
  *
  * Implements full REST integration with Jaskaran & Suryansh's Flask backend:
  * - /api/products

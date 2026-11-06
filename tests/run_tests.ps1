@@ -1,6 +1,6 @@
 # ======================================================================
 # run_tests.ps1 - Native PowerShell Test Suite Runner for PayPilot AI 2.0
-# Owned by Sehaj (Product Data, Comparison & Testing Lead)
+# Owned by Akashdeep (Product Data, Comparison & Testing Lead)
 # ======================================================================
 # Zero-dependency scenario test runner: runs anywhere on Windows without
 # requiring external Python or pip packages.
@@ -12,7 +12,7 @@ $rootDir = Split-Path -Parent $scriptDir
 
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host " PAYPILOT AI 2.0 - HACKATHON TEST SUITE (POWERSHELL RUNNER)           " -ForegroundColor Cyan
-Write-Host " Owned by Sehaj (Product Data, Comparison & Testing Lead)             " -ForegroundColor Cyan
+Write-Host " Owned by Akashdeep (Product Data, Comparison & Testing Lead)         " -ForegroundColor Cyan
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host ""
 

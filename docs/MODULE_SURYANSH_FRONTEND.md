@@ -1,19 +1,19 @@
 # PayPilot AI 2.0 — Frontend, Shopping UI & Accessibility
-**PayPal AI Hackathon 2026** • *Module Owner: Meenal*
+**PayPal AI Hackathon 2026** • *Module Owner: Suryansh*
 
 ---
 
 ## 📌 Ownership & Work Division (From Hackathon Specification)
 
 According to the official **PayPal AI Hackathon 2.0 Work Division**:
-- **Member:** Meenal
-- **Previous / Base Role:** Frontend/dashboard and accessibility.
+- **Member:** Suryansh
+- **Previous / Base Role:** Frontend/dashboard and accessibility; PayPal integration and security.
 - **Updated Responsibilities:** Frontend/dashboard, product cards, comparison, accessibility controls, and checkout screens; connect the UI to backend APIs and show multi-item bundle totals.
 - **Key Change:** *Clear ownership of the full shopping UI and bundle comparison.*
 
 ---
 
-## 🚀 Key Features Implemented by Meenal
+## 🚀 Key Features Implemented by Suryansh
 
 ### 1. 🛍️ Full Shopping UI & Core 4-Step User Journey
 * **Step 1: Describe**
@@ -88,7 +88,7 @@ According to the official **PayPal AI Hackathon 2.0 Work Division**:
 
 ## 🛡️ Hackathon Accuracy and Safety Checklist Compliance
 
-| Checklist Item | Meenal's Frontend Implementation |
+| Checklist Item | Suryansh's Frontend Implementation |
 | :--- | :--- |
 | **Do not claim PayPal Pay in 4 is always available** | Displays installment estimate ($34.49 x 4) alongside mandatory notice: *"PayPal Pay in 4 is subject to consumer eligibility and credit checks by PayPal at checkout... It is not guaranteed."* |
 | **Do not treat a small instalment as proof of affordability** | Emphasizes: *"Paying in 4 installments of $34.49 does not reduce your total financial obligation. The full cost remains $137.97."* |
@@ -101,7 +101,7 @@ According to the official **PayPal AI Hackathon 2.0 Work Division**:
 ## 📂 Project Structure
 
 ```
-E:\Meenal_Work\
+E:\PayPilot_AI_Final\frontend\
 ├── index.html                  # Main application UI & dashboard
 ├── serve.ps1                   # Local HTTP server script for development & demo
 ├── README.md                   # This documentation
@@ -120,7 +120,7 @@ E:\Meenal_Work\
 │   └── app.js                  # Main application router & view manager
 └── tests/
     ├── run_tests.html          # Interactive test runner
-    └── test_meenal_work.js     # 10 comprehensive automated test suites
+    └── test_suryansh_work.js   # 10 comprehensive automated test suites
 ```
 
 ---
@@ -133,7 +133,7 @@ Double-click `index.html` in your browser (Chrome, Edge, or Firefox). All featur
 ### Option B: Run Local HTTP Server
 In PowerShell:
 ```powershell
-cd E:\Meenal_Work
+cd E:\PayPilot_AI_Final\frontend
 .\serve.ps1 -Port 3000
 ```
 Open **`http://localhost:3000/index.html`** in your browser.

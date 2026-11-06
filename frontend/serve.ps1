@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Lightweight local HTTP server for PayPilot AI Frontend (Meenal's Work).
+  Lightweight local HTTP server for PayPilot AI Frontend (Suryansh's Work).
 .DESCRIPTION
   Runs an HTTP listener on http://127.0.0.1:3000 to preview the frontend UI
   and test live connectivity to the Flask backend running on port 5001.
@@ -17,7 +17,7 @@ $listener.Prefixes.Add($prefix)
 try {
   $listener.Start()
   Write-Host "==========================================================" -ForegroundColor Cyan
-  Write-Host "🚀 PayPilot AI Frontend Server (Meenal)" -ForegroundColor Green
+  Write-Host "🚀 PayPilot AI Frontend Server (Suryansh)" -ForegroundColor Green
   Write-Host "   URL: http://localhost:$Port/index.html" -ForegroundColor Yellow
   Write-Host "   Tests: http://localhost:$Port/tests/run_tests.html" -ForegroundColor Yellow
   Write-Host "   Backend API Target: http://127.0.0.1:5001" -ForegroundColor Gray

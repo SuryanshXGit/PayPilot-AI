@@ -1,6 +1,6 @@
 """
 PayPilot AI - AI Intent Parser
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 
 Interprets natural language shopping requests, extracting:
 - Product categories / items requested

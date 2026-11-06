@@ -1,5 +1,5 @@
 /**
- * PayPilot AI — Automated Test Suite for Meenal's Work
+ * PayPilot AI — Automated Test Suite for Suryansh's Work
  * Validates:
  * 1. Catalogue Data & Guardrail Disclosures
  * 2. Deterministic Budget Guard Calculations & Over-Budget Swaps
@@ -196,7 +196,7 @@
   // =========================================================================
   // RUNNER
   // =========================================================================
-  window.runMeenalTestSuite = async function () {
+  window.runSuryanshTestSuite = async function () {
     const outputEl = document.getElementById("test-results-output");
     if (outputEl) outputEl.innerHTML = `<p>Running ${tests.length} test suites...</p>`;
 
@@ -239,7 +239,7 @@
 
   window.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("test-results-output")) {
-      window.runMeenalTestSuite();
+      window.runSuryanshTestSuite();
     }
   });
 })();

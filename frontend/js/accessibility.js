@@ -1,6 +1,6 @@
 /**
  * PayPilot AI — Adaptive Universal Accessibility Controller
- * Module: Meenal (Universal Accessibility Owner)
+ * Module: Suryansh (Universal Accessibility Owner)
  *
  * Implements:
  * 1. High contrast mode (WCAG AAA compliant color ratios, clear borders)

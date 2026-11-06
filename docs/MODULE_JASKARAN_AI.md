@@ -1,19 +1,19 @@
 # PayPilot AI 2.0 — AI Shopping Assistant, Intent Parser & Multi-Item Reasoning Engine
-**PayPal AI Hackathon 2026** • *Module Owner: Shubhneet*
+**PayPal AI Hackathon 2026** • *Module Owner: Jaskaran*
 
 ---
 
 ## 📌 Ownership & Work Division (From Hackathon Specification)
 
 According to the official **PayPal AI Hackathon 2.0 Work Division**:
-- **Member:** Shubhneet
-- **Previous / Base Role:** AI chatbot, voice commands, financial notification filter.
-- **Updated Responsibilities:** AI intent parsing, product ranking, recommendations and explanations; handle multi-constraint prompts and trade-offs across several items. Voice input can follow; notification filter remains optional.
-- **Key Change:** **Multi-item reasoning is core; voice/filter are staged later.**
+- **Member:** Jaskaran
+- **Previous / Base Role:** Backend, Budget Guard, and AI reasoning engine.
+- **Updated Responsibilities:** AI intent parsing, product ranking, recommendations and explanations; handle multi-constraint prompts and trade-offs across several items. Flask backend, trusted catalogue prices, and Budget Guard.
+- **Key Change:** **Multi-item reasoning and Budget Guard are core deliverables.**
 
 ---
 
-## 🚀 Key Deliverables Implemented by Shubhneet
+## 🚀 Key Deliverables Implemented by Jaskaran
 
 ### 1. 🧠 Multi-Constraint AI Intent Parser (`app/services/ai_intent_parser.py`)
 - **Natural Language Entity Extraction**:
@@ -71,7 +71,7 @@ According to the official **PayPal AI Hackathon 2.0 Work Division**:
 
 ## 🛡️ Hackathon Accuracy and Safety Checklist Compliance
 
-| Checklist Item | Shubhneet's Implementation |
+| Checklist Item | Jaskaran's Implementation |
 | :--- | :--- |
 | **No Hallucinated Math** | All bundle prices, totals, differences, and surplus buffers are computed through deterministic arithmetic from trusted catalogue records. |
 | **PayPal Pay in 4 Disclosures** | The AI assistant explicitly discloses that Pay in 4 is subject to PayPal eligibility checks at checkout and that installment payments do not reduce total purchase obligation. |
@@ -200,7 +200,7 @@ All **58 unit and integration tests** pass, validating:
 
 ### Run Standalone AI Demo
 ```bash
-python demo_shubhneet_ai.py
+python demo_jaskaran_ai.py
 ```
 Demonstrates all 5 hackathon scenarios in terminal output with complete trade-off explanations.
 
@@ -208,9 +208,8 @@ Demonstrates all 5 hackathon scenarios in terminal output with complete trade-of
 
 ## 🤝 Team Integration Summary
 
-| Team Member | Module | Integration with Shubhneet's AI Engine |
+| Team Member | Module | Integration with Jaskaran's AI Engine |
 | :--- | :--- | :--- |
-| **Jaskaran** | Backend & Budget Guard | Shubhneet's engine consumes catalogue data and Budget Guard verification endpoints (`/api/products`, `/api/budget-guard/*`). |
-| **Meenal** | Frontend & Shopping UI | Meenal's UI consumes Shubhneet's `/api/ai/*` endpoints for chatbot dialogue, trade-offs, and voice input. |
-| **Suryansh** | PayPal Integration | Shubhneet's assistant guides validated, Budget Guard-locked bundles directly into Suryansh's PayPal Sandbox checkout flow. |
-| **Sehaj** | Testing & QA | Validated against test datasets, emergency expense flows, and open-source documentation. |
+| **Jaskaran** (This Module) | Backend, Budget Guard & AI | Connects catalogue data and Budget Guard verification endpoints (`/api/products`, `/api/budget-guard/*`) with multi-item reasoning. |
+| **Suryansh** | Frontend & PayPal Integration | Suryansh's UI consumes `/api/ai/*` endpoints for chatbot dialogue, trade-offs, voice input, and guides validated bundles into verified PayPal Sandbox checkout. |
+| **Akashdeep** | Testing & QA Lead | Validates against test datasets, emergency expense flows, scenario tests, and open-source documentation. |

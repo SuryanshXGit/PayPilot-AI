@@ -1,6 +1,6 @@
 """
 Unit tests for AIRankingEngine
-Module Owner: Shubhneet
+Module Owner: Jaskaran
 """
 
 import pytest
