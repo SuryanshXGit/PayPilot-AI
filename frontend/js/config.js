@@ -5,7 +5,9 @@
 
 const CONFIG = {
   // Backend API base URL (Flask server run by Jaskaran / Suryansh)
-  API_BASE_URL: "http://127.0.0.1:5001",
+API_BASE_URL: (typeof window !== "undefined"
+  ? window.location.origin
+  : "http://127.0.0.1:5001"),
 
   // Timeout for API requests in milliseconds
   API_TIMEOUT_MS: 15000,
