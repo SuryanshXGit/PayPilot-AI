@@ -22,7 +22,26 @@ When shoppers face multi-item purchases with strict financial constraints (e.g. 
 - **Honest capability claims**: Never claim access to unauthorized live bank balances or unverified PayPal features.
 
 ---
+---
 
+## 🛠️ Technology Stack & Cloud Deployment
+
+### Frontend
+- **HTML5, CSS3 & JavaScript:** Responsive shopping dashboard, product catalogue, budget interface, and checkout experience.
+- **Web Speech API:** Voice input and text-to-speech accessibility features.
+- **Chart.js:** Product price-history visualizations, if enabled in the application.
+
+### Backend
+- **Python & Flask:** REST API, product management, bill tracking, order processing, and Budget Guard.
+- **Google Gemini:** Optional AI language-model integration for conversational shopping assistance.
+
+### Payment Integration
+- **PayPal Developer Sandbox:** PayPal Orders API v2, OAuth 2.0 authentication, buyer approval, and server-side payment capture verification.
+
+### Database & Hosting
+- **Neon PostgreSQL:** Persistent cloud database storing products, bills, locked orders, and payment statuses.
+- **Render:** Cloud hosting and deployment of the Flask backend API.
+- **GitHub:** Source-code management and team collaboration.
 ## 🧭 Core 4-Step User Journey
 
 ```mermaid
@@ -135,7 +154,7 @@ E:\PayPilot_AI_Final\
 ├── app/                               # Integrated Python / Flask Application
 │   ├── __init__.py                    # App factory, blueprints, CORS & static serving
 │   ├── config.py                      # Environment configuration
-│   ├── database.py                    # SQLite connection pool & table creation
+│   ├── database.py                    # PostgreSQL for deployment; SQLite for local testing
 │   ├── models.py                      # Data model representations
 │   ├── data/
 │   │   ├── schema.sql                 # SQL schema (products, bills, locked_orders)
