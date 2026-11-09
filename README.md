@@ -305,7 +305,15 @@ python demo_suryansh_integration.py
 Walks through order locking, PayPal Orders v2 creation, simulated buyer approval, server-side capture verification, and tampering rejection.
 
 ---
+### Cloud Database Configuration
 
+For deployed environments, configure the following environment variable:
+
+- `DATABASE_URL`: Neon PostgreSQL connection string.
+
+For local development, configure the required variables using `.env.example`.
+
+Never commit actual API keys, PayPal credentials, or database passwords.
 ## 📡 REST API Reference
 
 ### 1. Catalogue & Products
