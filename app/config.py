@@ -15,6 +15,7 @@ class Config:
     DEBUG = os.getenv("FLASK_DEBUG", "1") == "1"
     PORT = int(os.getenv("PORT", 5001))
     DATABASE_PATH = os.getenv("DATABASE_PATH", str(BASE_DIR / "paypilot.db"))
+    DATABASE_URL = os.getenv("DATABASE_URL", "")
     CORS_ORIGINS = os.getenv("FRONTEND_ORIGIN", "*")
 
     # Currency and calculation constants
@@ -36,4 +37,5 @@ class TestConfig(Config):
     """Configuration for testing with an in-memory database or temporary file."""
     TESTING = True
     DATABASE_PATH = ":memory:"
+    DATABASE_URL = None
     DEBUG = False

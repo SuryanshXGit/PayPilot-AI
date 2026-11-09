@@ -17,13 +17,9 @@ class BillService:
     @staticmethod
     def get_reference_date(custom_date: Optional[str] = None) -> date:
         if custom_date:
-            return datetime.strptime(custom_date, "%Y-%m-%d").date()
-        # If current system year is >= 2026, use today, otherwise default reference demo date
-        today = date.today()
-        if today.year >= 2026:
-            return today
-        return BillService.DEFAULT_REFERENCE_DATE
+         return datetime.strptime(custom_date, "%Y-%m-%d").date()
 
+        return BillService.DEFAULT_REFERENCE_DATE
     @staticmethod
     def get_all_bills(
         due_within_days: Optional[int] = None,
